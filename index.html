@@ -22,22 +22,22 @@ h1{color:#111827;font-size:24px;line-height:1.12;margin:0 0 5px;font-weight:800}
 .wide-field{margin:26px 0 10px}.wide-field label{display:block;font-weight:500;margin-bottom:5px}
 textarea{width:100%;min-height:34px;overflow:hidden;resize:none;border:0;border-bottom:1px solid #444;font:inherit;line-height:1.3;padding:2px;background:transparent}
 textarea.multi{
-min-height:78px;
+min-height:96px;
 border:0;
 padding:0 2px;
-line-height:1.9;
+line-height:2.4;
 background:transparent;
 position:relative;
 z-index:2;
 }
 .lined-textarea{
 position:relative;
-min-height:78px;
+min-height:96px;
 }
 .lined-textarea textarea.multi{
 display:block;
 width:100%;
-min-height:78px;
+min-height:96px;
 }
 .line-layer{
 position:absolute;
@@ -50,7 +50,7 @@ pointer-events:none;
 }
 .line-layer span{
 display:block;
-height:1.9em;
+height:2.4em;
 border-bottom:1px solid #444;
 }
 .signature-row{display:grid;grid-template-columns:250px 1fr;gap:28px;margin:14px 0}
@@ -143,16 +143,16 @@ h1{font-size:24px;line-height:1.12;margin:0 0 5px}
 .subtitle{font-size:12.5px;margin-bottom:24px}
 .section{margin-top:18px;padding-top:14px}
 textarea.multi{
-min-height:78px;
-line-height:1.9;
+min-height:96px;
+line-height:2.4;
 background:transparent;
 }
 .lined-textarea,
 .lined-textarea textarea.multi{
-min-height:78px;
+min-height:96px;
 }
 .line-layer span{
-height:1.9em;
+height:2.4em;
 border-bottom:1px solid #444;
 }
 textarea.empty-print{min-height:34px}
@@ -170,7 +170,7 @@ textarea.empty-print{min-height:34px}
 <div class="keep"><h1>Žádost o odlišnou úpravu organizace vzdělávání</h1><div class="subtitle">§16, odst.&nbsp;2 písm.&nbsp;b) zákona č.&nbsp;561/2004&nbsp;Sb., o&nbsp;předškolním, základním, středním, vyšším odborném a&nbsp;jiném vzdělávání (školský zákon), ve&nbsp;znění pozdějších předpisů</div></div>
 <section class="form-card"><div class="card-title">Údaje žáka</div><div class="field-row"><div class="field"><label for="jmeno">Příjmení a&nbsp;jméno:</label><input id="jmeno" name="jmeno" class="line-input" type="text"></div><div class="field"><label for="rodne_cislo">Rodné číslo:</label><input id="rodne_cislo" name="rodne_cislo" class="line-input" type="text"></div></div>
 <div class="field-row"><div class="field"><label for="bydliste">Bydliště:</label><input id="bydliste" name="bydliste" class="line-input" type="text"></div><div class="field"><label for="psc">PSČ:</label><input id="psc" name="psc" class="line-input" type="text"></div></div>
-<div class="field-row thirds"><div class="field"><label for="skolni_rok">Školní rok:</label><input id="skolni_rok" name="skolni_rok" class="line-input" type="text"></div><div class="field"><label for="trida">Třída:</label><input id="trida" name="trida" class="line-input" type="text"></div><div></div></div>
+<div class="field-row"><div class="field"><label for="skolni_rok">Školní rok:</label><input id="skolni_rok" name="skolni_rok" class="line-input" type="text"></div><div class="field"><label for="trida">Třída:</label><input id="trida" name="trida" class="line-input" type="text"></div></div>
 </section><section class="form-card"><div class="card-title">Požadované studijní úpravy</div><div class="wide-field keep"><label for="rozsah">Požadovaný rozsah studijních úprav:</label><div class="lined-textarea"><textarea id="rozsah" name="rozsah" class="multi"></textarea><div class="line-layer" aria-hidden="true"><span></span><span></span><span></span></div></div></div>
 <div class="signature-row keep"><div class="field"><label for="brno1">V&nbsp;Brně</label><input id="brno1" name="brno1" class="line-input" type="text"></div><div class="field"><label for="podpis1">Podpis:</label><input id="podpis1" name="podpis1" class="line-input" type="text"></div></div>
 </section><section class="form-card"><div class="card-title">Vyjádření lékaře</div><div class="lined-textarea"><textarea id="vyjadreni_lekare" name="vyjadreni_lekare" class="multi"></textarea><div class="line-layer" aria-hidden="true"><span></span><span></span><span></span></div></div><div class="signature-row"><div class="field"><label for="brno2">V&nbsp;Brně</label><input id="brno2" name="brno2" class="line-input" type="text"></div><div class="field"><label for="podpis_lekar">Podpis a&nbsp;razítko lékaře</label><input id="podpis_lekar" name="podpis_lekar" class="line-input" type="text"></div></div></section>
