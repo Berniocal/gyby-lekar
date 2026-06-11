@@ -847,6 +847,47 @@ textarea.multi,
     }
 }
 
+
+
+/* === DOLADĚNÍ: větší mezery mezi bloky, stále 1× A4 === */
+@media screen{
+    .form-card{
+        margin:10px 0 !important;
+        padding-top:8px !important;
+        padding-bottom:9px !important;
+    }
+    .card-title{
+        margin-bottom:8px !important;
+    }
+}
+
+@media print{
+    @page{size:A4;margin:10mm !important;}
+
+    .form-card{
+        margin:8px 0 !important;
+        padding-top:7px !important;
+        padding-bottom:8px !important;
+    }
+
+    .card-title{
+        margin-bottom:7px !important;
+        padding-bottom:3px !important;
+    }
+
+    .top{
+        margin-bottom:14px !important;
+    }
+
+    .subtitle{
+        margin-bottom:8px !important;
+    }
+
+    .signature-row{
+        margin-top:6px !important;
+    }
+}
+
 </style>
 </head>
 <body>
