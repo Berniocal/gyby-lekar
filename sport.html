@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Žádost o odlišnou úpravu organizace vzdělávání – sport</title>
+<style>
+@media screen and (max-width:900px){body{padding:16px}.page{margin:0}}
+*{box-sizing:border-box}
+body{margin:0;padding:28px 16px;background:#f8f9fa;color:#1f2933;font-family:"Segoe UI",Tahoma,Geneva,Verdana,sans-serif;font-size:13.5px;line-height:1.32;overflow-x:auto}
+.page{width:794px;min-width:794px;margin:30px auto;padding:20mm;background:white;border-radius:8px;box-shadow:0 4px 15px rgba(0,0,0,.06)}
+.top{display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:start;margin-bottom:14px}
+.school{display:grid;grid-template-columns:120px 1fr;gap:18px;align-items:start}
+.logo-box{width:120px;height:90px;display:flex;align-items:center;justify-content:center}
+.logo-box img{max-width:100%;max-height:100%;object-fit:contain}
+.school-text{font-size:11px;line-height:1.12;color:#111}
+.school-name{display:block;white-space:nowrap;font-size:13.2px;line-height:1.08;font-weight:800;color:#111}
+.school-org{display:block;font-size:13.2px;line-height:1.08;font-weight:800;color:#111;margin-bottom:5px}
+.stamp-table{border-collapse:collapse;width:100%;font-size:12px}
+.stamp-table td{border:1px solid #333;padding:4px 7px;height:24px}
+.stamp-table .center{text-align:center;font-weight:600}
+h1{color:#111827;font-size:24px;line-height:1.12;margin:0 0 2px;font-weight:800}
+.subtitle{font-size:12.5px;color:#111827;margin-bottom:24px}
+.form-body{padding-top:0}
+.form-card{border:1px solid #d6dbe3;border-radius:8px;padding:10px 12px 11px;margin:8px 0;background:#fff;break-inside:avoid;page-break-inside:avoid}
+.card-title{font-size:13px;font-weight:800;color:#111;text-transform:uppercase;letter-spacing:.04em;margin:-2px 0 12px;padding-bottom:6px;border-bottom:1px solid #e4e8ee}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:10px}
+.field-row.thirds{grid-template-columns:1fr 1fr 1fr}
+.field-row.wide-left{grid-template-columns:1.35fr .65fr}
+.field{display:flex;align-items:flex-end;gap:7px;min-width:0}
+.field label{white-space:nowrap;font-weight:500}
+.line-input{flex:1;min-width:80px;border:0;border-bottom:1px solid #666;font:inherit;padding:2px 2px 1px;outline:none;background:transparent;color:#111827}
+.line-input:focus,textarea:focus{border-color:#2b6cb0;outline:none}
+.wide-field{margin:0 0 12px}
+.wide-field label{display:block;font-weight:500;margin-bottom:5px}
+textarea{width:100%;min-height:34px;overflow:hidden;resize:none;border:0;border-bottom:1px solid #666;font:inherit;line-height:1.3;padding:2px;background:transparent;color:#111827}
+textarea.multi{min-height:96px;border:0;padding:0 2px;line-height:2.4;background:transparent;position:relative;z-index:2;display:block;width:100%}
+.lined-textarea{position:relative;min-height:96px}
+.lined-textarea textarea.multi{min-height:96px}
+.line-layer{position:absolute;left:0;right:0;top:0;bottom:0;z-index:1;pointer-events:none}
+.line-layer span{display:block;height:2.4em;border-bottom:1px solid #666}
+.signature-row{display:grid;grid-template-columns:250px 1fr;gap:28px;margin:8px 0 0}
+.actions-panel{margin-top:14px;padding:12px;background:#f7fafc;border:1px solid #e2e8f0;border-radius:8px;display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{padding:10px 18px;font-size:13.5px;font-weight:700;border:0;border-radius:6px;cursor:pointer}
+.btn-primary{background:#2b6cb0;color:white}
+.keep{break-inside:avoid;page-break-inside:avoid}
+.small-note{font-size:12px;color:#374151;margin-top:-4px;margin-bottom:8px}
+@page{size:A4;margin:15mm}
+@media print{
+body{padding:0;background:white;font-size:13.5px;line-height:1.32}
+.page{width:auto;max-width:none;min-width:0;margin:0 auto;box-shadow:none;border-radius:0;padding:0;background:white}
+.actions-panel{display:none !important}
+.top{display:grid;grid-template-columns:1fr 290px;gap:24px;align-items:start;margin-bottom:24px}
+.form-card{border:1px solid #cfd5dd;border-radius:6px;padding:11px 13px 12px;margin:10px 0;background:#fff}
+.card-title{font-size:12px;margin-bottom:9px;padding-bottom:5px}
+.field-row{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-bottom:10px}
+.field-row.thirds{grid-template-columns:1fr 1fr 1fr}
+.field-row.wide-left{grid-template-columns:1.35fr .65fr}
+textarea.multi{min-height:96px;line-height:2.4;background:transparent}
+.lined-textarea,.lined-textarea textarea.multi{min-height:96px}
+.line-layer span{height:2.4em;border-bottom:1px solid #666}
+}
+
+.one-line-field{
+    display:flex;
+    align-items:flex-end;
+    gap:6px;
+    margin:12px 0 16px;
+}
+.one-line-field label{
+    white-space:nowrap;
+    font-weight:500;
+}
+.one-line-field .line-input{
+    flex:1;
+    min-width:120px;
+}
+
+
+.extra-lines{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+    margin-top:8px;
+}
+
+.extra-lines .line-input{
+    width:100%;
+    border:0;
+    border-bottom:1px solid #666;
+    background:transparent;
+    font:inherit;
+    padding:2px 2px 1px;
+}
+
+.extra-lines .line-input:focus{
+    border-color:#2b6cb0;
+    outline:none;
+}
+
+
+.club-line{
+    gap:4px;
+    margin:10px 0 12px;
+}
+
+.club-line label{
+    white-space:nowrap;
+    font-weight:500;
+    margin:0;
+}
+
+.club-line .line-input{
+    flex:1;
+    min-width:0;
+}
+
+
+/* FINÁLNÍ OPRAVA: linky hned za dvojtečkou */
+.form-card .club-line,
+.form-card .rozsah-line{
+    display:flex !important;
+    align-items:flex-end !important;
+    gap:4px !important;
+    margin:10px 0 12px !important;
+}
+
+.form-card .club-line label,
+.form-card .rozsah-line label{
+    display:inline-block !important;
+    white-space:nowrap !important;
+    font-weight:500 !important;
+    margin:0 !important;
+}
+
+.form-card .club-line .line-input,
+.form-card .rozsah-line .line-input{
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    width:auto !important;
+    border:0 !important;
+    border-bottom:1px solid #666 !important;
+    background:transparent !important;
+    font:inherit !important;
+    padding:2px 2px 1px !important;
+}
+
+.extra-lines{
+    display:flex !important;
+    flex-direction:column !important;
+    gap:14px !important;
+    margin-top:8px !important;
+}
+
+.extra-lines .line-input{
+    width:100% !important;
+    border:0 !important;
+    border-bottom:1px solid #666 !important;
+    background:transparent !important;
+    font:inherit !important;
+    padding:2px 2px 1px !important;
+}
+
+
+/* FINÁLNÍ KOMPAKTNÍ REŽIM PRO 1× A4 */
+@page{
+    size:A4;
+    margin:10mm;
+}
+
+@media print{
+    body{
+        font-size:12.2px !important;
+        line-height:1.22 !important;
+        padding:0 !important;
+        background:white !important;
+    }
+
+    .page{
+        width:auto !important;
+        min-width:0 !important;
+        max-width:none !important;
+        margin:0 !important;
+        padding:0 !important;
+        box-shadow:none !important;
+        border-radius:0 !important;
+    }
+
+    .top{
+        margin-bottom:14px !important;
+        gap:16px !important;
+        grid-template-columns:1fr 255px !important;
+    }
+
+    .school{
+        grid-template-columns:92px 1fr !important;
+        gap:12px !important;
+    }
+
+    .logo-box{
+        width:92px !important;
+        height:68px !important;
+    }
+
+    .school-text{
+        font-size:9.8px !important;
+        line-height:1.05 !important;
+    }
+
+    .school-name,
+    .school-org{
+        font-size:11.5px !important;
+        line-height:1.03 !important;
+        margin-bottom:3px !important;
+    }
+
+    .stamp-table{
+        font-size:10.5px !important;
+    }
+
+    .stamp-table td{
+        height:19px !important;
+        padding:2px 5px !important;
+    }
+
+    h1{
+        font-size:20px !important;
+        line-height:1.04 !important;
+        margin:0 0 2px !important;
+    }
+
+    .subtitle{
+        font-size:11.2px !important;
+        margin-bottom:8px !important;
+    }
+
+    .form-card{
+        padding:7px 10px 8px !important;
+        margin:6px 0 !important;
+        border-radius:5px !important;
+    }
+
+    .card-title{
+        font-size:11.3px !important;
+        margin:0 0 6px !important;
+        padding-bottom:4px !important;
+        line-height:1.12 !important;
+    }
+
+    .field-row{
+        gap:18px !important;
+        margin-bottom:6px !important;
+    }
+
+    .field{
+        gap:5px !important;
+    }
+
+    .wide-field{
+        margin:0 0 7px !important;
+    }
+
+    .wide-field label{
+        margin-bottom:2px !important;
+    }
+
+    .line-input{
+        padding:1px 2px 0 !important;
+    }
+
+    textarea{
+        min-height:25px !important;
+        line-height:1.2 !important;
+    }
+
+    textarea.multi{
+        min-height:66px !important;
+        line-height:1.72 !important;
+    }
+
+    .lined-textarea,
+    .lined-textarea textarea.multi{
+        min-height:66px !important;
+    }
+
+    .line-layer span{
+        height:1.72em !important;
+    }
+
+    .form-card .club-line,
+    .form-card .rozsah-line{
+        margin:6px 0 7px !important;
+        gap:3px !important;
+    }
+
+    .extra-lines{
+        gap:8px !important;
+        margin-top:4px !important;
+    }
+
+    .signature-row{
+        grid-template-columns:230px 1fr !important;
+        gap:22px !important;
+        margin:8px 0 0 !important;
+    }
+
+    .small-note{
+        font-size:10.5px !important;
+        margin-top:-3px !important;
+        margin-bottom:4px !important;
+    }
+
+    .actions-panel{
+        display:none !important;
+    }
+}
+
+@media screen{
+    .page{
+        padding:16mm !important;
+    }
+    .top{
+        margin-bottom:18px !important;
+    }
+    h1{
+        margin-bottom:2px !important;
+    }
+    .subtitle{
+        margin-bottom:10px !important;
+    }
+    .form-card{
+        margin:7px 0 !important;
+        padding:8px 11px 9px !important;
+    }
+    .card-title{
+        margin-bottom:7px !important;
+    }
+}
+
+
+/* SJEDNOCENÍ VZDÁLENOSTÍ MEZI LINKAMI + ZACHOVÁNÍ 1× A4 */
+:root{
+    --line-step-screen: 24px;
+    --line-step-print: 19px;
+}
+
+.lined-textarea{
+    min-height: calc(var(--line-step-screen) * 3) !important;
+}
+
+.lined-textarea textarea.multi{
+    min-height: calc(var(--line-step-screen) * 3) !important;
+    line-height: var(--line-step-screen) !important;
+    padding:0 2px !important;
+}
+
+.line-layer span{
+    height: var(--line-step-screen) !important;
+}
+
+.extra-lines{
+    gap:0 !important;
+    margin-top:0 !important;
+}
+
+.extra-lines .line-input{
+    height: var(--line-step-screen) !important;
+    padding:0 2px !important;
+}
+
+.form-card .rozsah-line{
+    margin-bottom:0 !important;
+}
+
+@media print{
+    .lined-textarea{
+        min-height: calc(var(--line-step-print) * 3) !important;
+    }
+
+    .lined-textarea textarea.multi{
+        min-height: calc(var(--line-step-print) * 3) !important;
+        line-height: var(--line-step-print) !important;
+        padding:0 2px !important;
+    }
+
+    .line-layer span{
+        height: var(--line-step-print) !important;
+    }
+
+    .extra-lines{
+        gap:0 !important;
+        margin-top:0 !important;
+    }
+
+    .extra-lines .line-input{
+        height: var(--line-step-print) !important;
+        padding:0 2px !important;
+    }
+
+    .form-card .rozsah-line{
+        margin:5px 0 0 !important;
+        gap:3px !important;
+    }
+
+    .form-card .club-line{
+        margin:5px 0 5px !important;
+    }
+
+    /* drobné dorovnání, aby se sjednocení linek stále vešlo na 1 A4 */
+    .form-card{
+        padding-top:6px !important;
+        padding-bottom:7px !important;
+        margin-top:5px !important;
+        margin-bottom:5px !important;
+    }
+
+    .card-title{
+        margin-bottom:5px !important;
+        padding-bottom:3px !important;
+    }
+
+    .wide-field{
+        margin-bottom:5px !important;
+    }
+}
+
+@media screen{
+    .form-card .rozsah-line{
+        margin-bottom:0 !important;
+    }
+}
+
+
+/* FINÁLNÍ SJEDNOCENÍ ŠÍŘKY VŠECH SAMOSTATNÝCH LINEK */
+.form-card .lined-textarea,
+.form-card .extra-lines{
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.form-card .lined-textarea .line-layer{
+    left:0 !important;
+    right:0 !important;
+    width:100% !important;
+}
+
+.form-card .line-layer span,
+.form-card .extra-lines .line-input,
+.form-card textarea.multi{
+    width:100% !important;
+    max-width:100% !important;
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+
+.form-card textarea.multi{
+    display:block !important;
+    padding-left:0 !important;
+    padding-right:0 !important;
+}
+
+.form-card .extra-lines .line-input{
+    display:block !important;
+    flex:none !important;
+    min-width:0 !important;
+}
+
+/* první řádek za dvojtečkou zůstane inline */
+.form-card .club-line,
+.form-card .rozsah-line{
+    width:100% !important;
+}
+
+.form-card .club-line .line-input,
+.form-card .rozsah-line .line-input{
+    width:auto !important;
+    flex:1 1 auto !important;
+}
+
+/* v tisku drž všechny linky stejně a úsporně */
+@media print{
+    .form-card .lined-textarea,
+    .form-card .extra-lines{
+        width:100% !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+    .form-card .line-layer span,
+    .form-card .extra-lines .line-input,
+    .form-card textarea.multi{
+        width:100% !important;
+        max-width:100% !important;
+        margin-left:0 !important;
+        margin-right:0 !important;
+    }
+
+    .form-card{
+        overflow:hidden !important;
+    }
+}
+
+
+
+/* === ÚPRAVA: 1× A4 + všechny dopisovací řádky stejně vysoké === */
+:root{
+    --uniform-line-screen: 22px;
+    --uniform-line-print: 20px;
+}
+
+/* jeden společný rytmus pro všechny linky */
+.one-line-field,
+.form-card .club-line,
+.form-card .rozsah-line,
+.field{
+    min-height: var(--uniform-line-screen) !important;
+    height: var(--uniform-line-screen) !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    align-items: flex-end !important;
+}
+
+.line-input,
+.extra-lines .line-input,
+textarea.multi,
+.line-layer span{
+    height: var(--uniform-line-screen) !important;
+    line-height: var(--uniform-line-screen) !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.extra-lines{
+    gap:0 !important;
+    margin-top:0 !important;
+}
+
+.lined-textarea,
+.lined-textarea textarea.multi{
+    min-height: calc(var(--uniform-line-screen) * 3) !important;
+    height: calc(var(--uniform-line-screen) * 3) !important;
+}
+
+.field-row{
+    margin-bottom:4px !important;
+}
+
+.wide-field{
+    margin-bottom:4px !important;
+}
+
+.signature-row{
+    margin-top:6px !important;
+}
+
+@media print{
+    @page{size:A4;margin:9mm !important;}
+
+    body{
+        font-size:11.7px !important;
+        line-height:1.12 !important;
+    }
+
+    .top{
+        margin-bottom:9px !important;
+        gap:12px !important;
+        grid-template-columns:1fr 238px !important;
+    }
+
+    .school{
+        grid-template-columns:82px 1fr !important;
+        gap:9px !important;
+    }
+
+    .logo-box{
+        width:82px !important;
+        height:61px !important;
+    }
+
+    .school-text{
+        font-size:9.1px !important;
+        line-height:1.02 !important;
+    }
+
+    .school-name,
+    .school-org{
+        font-size:10.8px !important;
+        line-height:1.01 !important;
+        margin-bottom:2px !important;
+    }
+
+    .stamp-table{
+        font-size:9.8px !important;
+    }
+
+    .stamp-table td{
+        height:17px !important;
+        padding:1px 4px !important;
+    }
+
+    h1{
+        font-size:18.2px !important;
+        line-height:1.02 !important;
+        margin:0 0 1px !important;
+    }
+
+    .subtitle{
+        font-size:10.2px !important;
+        line-height:1.12 !important;
+        margin-bottom:6px !important;
+    }
+
+    .form-card{
+        margin:4px 0 !important;
+        padding:5px 8px 6px !important;
+        border-radius:4px !important;
+    }
+
+    .card-title{
+        font-size:10.7px !important;
+        line-height:1.08 !important;
+        margin:0 0 4px !important;
+        padding-bottom:2px !important;
+    }
+
+    .small-note{
+        font-size:9.8px !important;
+        line-height:1.1 !important;
+        margin-top:-2px !important;
+        margin-bottom:3px !important;
+    }
+
+    .field-row{
+        gap:15px !important;
+        margin-bottom:3px !important;
+    }
+
+    .wide-field{
+        margin-bottom:3px !important;
+    }
+
+    .one-line-field,
+    .form-card .club-line,
+    .form-card .rozsah-line,
+    .field{
+        min-height:var(--uniform-line-print) !important;
+        height:var(--uniform-line-print) !important;
+        margin-top:0 !important;
+        margin-bottom:0 !important;
+    }
+
+    .line-input,
+    .extra-lines .line-input,
+    textarea.multi,
+    .line-layer span{
+        height:var(--uniform-line-print) !important;
+        line-height:var(--uniform-line-print) !important;
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+    }
+
+    .extra-lines{
+        gap:0 !important;
+        margin-top:0 !important;
+    }
+
+    .lined-textarea,
+    .lined-textarea textarea.multi{
+        min-height:calc(var(--uniform-line-print) * 3) !important;
+        height:calc(var(--uniform-line-print) * 3) !important;
+    }
+
+    .signature-row{
+        grid-template-columns:215px 1fr !important;
+        gap:18px !important;
+        margin-top:5px !important;
+    }
+
+    .actions-panel{display:none !important;}
+}
+
+
+
+/* === FINÁLNÍ PROVZDUŠNĚNÍ: stále 1× A4, ale méně natěsno === */
+:root{
+    --uniform-line-screen: 25px;
+    --uniform-line-print: 24px;
+}
+
+/* sjednocená výška všech dopisovacích řádků */
+.one-line-field,
+.form-card .club-line,
+.form-card .rozsah-line,
+.field{
+    min-height:var(--uniform-line-screen) !important;
+    height:var(--uniform-line-screen) !important;
+    align-items:flex-end !important;
+}
+
+.line-input,
+.extra-lines .line-input,
+textarea.multi,
+.line-layer span{
+    height:var(--uniform-line-screen) !important;
+    line-height:var(--uniform-line-screen) !important;
+    padding-top:0 !important;
+    padding-bottom:0 !important;
+}
+
+.lined-textarea,
+.lined-textarea textarea.multi{
+    min-height:calc(var(--uniform-line-screen) * 3) !important;
+    height:calc(var(--uniform-line-screen) * 3) !important;
+}
+
+.extra-lines{
+    gap:0 !important;
+    margin-top:0 !important;
+}
+
+@media print{
+    @page{size:A4;margin:10mm !important;}
+
+    body{
+        font-size:12.4px !important;
+        line-height:1.2 !important;
+    }
+
+    .top{
+        margin-bottom:15px !important;
+        gap:16px !important;
+        grid-template-columns:1fr 255px !important;
+    }
+
+    .school{
+        grid-template-columns:88px 1fr !important;
+        gap:11px !important;
+    }
+
+    .logo-box{
+        width:88px !important;
+        height:65px !important;
+    }
+
+    .school-text{
+        font-size:9.8px !important;
+        line-height:1.06 !important;
+    }
+
+    .school-name,
+    .school-org{
+        font-size:11.5px !important;
+        line-height:1.04 !important;
+        margin-bottom:3px !important;
+    }
+
+    .stamp-table{
+        font-size:10.5px !important;
+    }
+
+    .stamp-table td{
+        height:19px !important;
+        padding:2px 5px !important;
+    }
+
+    h1{
+        font-size:20px !important;
+        line-height:1.06 !important;
+        margin:0 0 2px !important;
+    }
+
+    .subtitle{
+        font-size:11px !important;
+        line-height:1.16 !important;
+        margin-bottom:8px !important;
+    }
+
+    .form-card{
+        margin:6px 0 !important;
+        padding:7px 10px 8px !important;
+        border-radius:5px !important;
+    }
+
+    .card-title{
+        font-size:11.4px !important;
+        line-height:1.12 !important;
+        margin:0 0 6px !important;
+        padding-bottom:3px !important;
+    }
+
+    .small-note{
+        font-size:10.3px !important;
+        line-height:1.14 !important;
+        margin-top:-1px !important;
+        margin-bottom:5px !important;
+    }
+
+    .field-row{
+        gap:18px !important;
+        margin-bottom:5px !important;
+    }
+
+    .wide-field{
+        margin-bottom:5px !important;
+    }
+
+    .one-line-field,
+    .form-card .club-line,
+    .form-card .rozsah-line,
+    .field{
+        min-height:var(--uniform-line-print) !important;
+        height:var(--uniform-line-print) !important;
+        margin-top:0 !important;
+        margin-bottom:0 !important;
+        align-items:flex-end !important;
+    }
+
+    .line-input,
+    .extra-lines .line-input,
+    textarea.multi,
+    .line-layer span{
+        height:var(--uniform-line-print) !important;
+        line-height:var(--uniform-line-print) !important;
+        padding-top:0 !important;
+        padding-bottom:0 !important;
+    }
+
+    .extra-lines{
+        gap:0 !important;
+        margin-top:0 !important;
+    }
+
+    .lined-textarea,
+    .lined-textarea textarea.multi{
+        min-height:calc(var(--uniform-line-print) * 3) !important;
+        height:calc(var(--uniform-line-print) * 3) !important;
+    }
+
+    .signature-row{
+        grid-template-columns:230px 1fr !important;
+        gap:22px !important;
+        margin-top:7px !important;
+    }
+}
+
+</style>
+</head>
+<body>
+<div class="page">
+    <div class="top keep">
+        <div class="school">
+            <div class="logo-box"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABjgAAAWnCAYAAAD+O3psAAAACXBIWXMAAC4jAAAuIwF4pT92AAAgAElEQVR4nOzd2ZFcx5XH4XMVeifHAkEWkLKAkAVsWqCWBz0eaDyALFDDgml4AHhAWDANDwgLch6qQCzspZZ7K/Pk+b6IftHSvBGMQC3/zB+W1loAAAAAAABk8qfeDwAAAAAAAHAsAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADS+XPvBwAAAOayLMuLiHgRET9GxPcR8WtE/NZae9vtoQAAgOksrbXezwAAACS3HzWuIuImIv7yxP/0dUTctdbuLvBYAADAxAwcAADAyZZluY7dsPHzkf/XDxFxFxGvWmv3Kz8WAABQgIEDAAA4yrIsP8bupsZVRHy3wq98HxGvYnez47cVfh8AAFCAgQMAAHjWEQmqc0lYAQAABzFwAAAAjzojQXUuCSsAAOBJBg4AAOArGySoziVhBQAA/IGBAwAAuGSC6lwSVgAAQEQYOAAAoKxlWb6P3ahxHRE/9X2ao32MiNuIuG2t/dr5WQAAgA4MHAAAUMyyLC9jN2qMkqA61/v4PHZIWAEAQBEGDgAAKGCfoLre/4ycoDrXm9gNHRJWAAAwOQMHAABMKnmC6lwSVgAAMDkDBwAATGbCBNW5JKwAAGBCBg4AAJhAoQTVuSSsAABgEgYOAABIqniC6lwSVgAAkJyBAwAAkpGgWp2EFQAAJGTgAACABCSoLkbCCgAAkjBwAADAoCSoupKwAgCAwRk4AABgMBJUw5GwAgCAARk4AABgABJUaUhYAQDAIAwcAADQiQRVahJWAADQmYEDAAAuTIJqOhJWAADQgYEDAAAuQIKqDAkrAAC4EAMHAABsRIKqNAkrAADYmIEDAABWJkHFNySsAABgAwYOAABYgQQVB5KwAgCAlRg4AADgRBJUnEHCCgAAzmTgAACAI0lQsTIJKwAAOIGBAwAADiBBxYVIWAEAwIEMHAAA8AgJKjqSsAIAgGcYOAAA4BsSVAxGwgoAAB5g4AAAgJCgIg0JKwAA2DNwAABQlgQViUlYAQBQnoEDAIByJKiYjIQVAAAlGTgAAChBgooi3kTEXWvttveDAADA1gwcAABMS4KKwj5GxF1EvJKwAgBgVgYOAACmI0EFX/kQEa9id7PjvvOzAADAagwcAABMQYIKDiJhBQDANAwcAACkJUEFJ5OwAgAgPQMHAADpSFDBqiSsAABIycABAEAKElRwERJWAACkYeAAAGBYElTQjYQVAADDM3AAADCcZVmuYjds/KP3swASVgAAjMnAAQDAEPYJqpvYDRsSVDAmCSsAAIZh4AAAoJsvElQ3EfFD58cBDidhBQBAdwYOAAAuToIKpiJhBQBAFwYOAAAuQoIKSpCwAgDgYgwcAABsRoIKypKwAgBgcwYOAABWJ0EFfEHCCgCATRg4AABYhQQVcAAJKwAAVmPgAADgZBJUwIkkrAAAOJuBAwCAo0lQASuSsAIA4CQGDgAADiJBBVyAhBUAAAczcAAA8CgJKqATCSsAAJ5l4AAA4A8kqICBSFgBAPAgAwcAABEhQQWkIGEFAMDvDBwAAIVJUAFJSVgBAGDgAACoSIIKmIiEFQBAUQYOAIAiJKiAAiSsAAAKMXAAAExMggooSsIKAKAAAwcAwIQkqAB+J2EFADApAwcAwCQkqACe9SZ2NzvuWmu/9X4YAADOY+AAAEhMggrgJJ8SVrettbednwUAgBMZOAAAEpKgAljNh4i4jd3Ycd/3UQAAOIaBAwAgCQkqgM29i93YIWEFAJCAgQMAYGASVABdSFgBACRg4AAAGJAEFcAwJKwAAAZl4AAAGIQEFcDwJKwAAAZi4AAA6EiCCiAlCSsAgAEYOAAAOpCgApiGhBUAQCcGDgCAC5GgApiehBUAwAUZOAAANiRBBVCShBUAwAUYOAAANiBBBcCehBUAwEYMHAAAK5GgAuAZElYAACsycAAAnEGCCoATSFgBAKzAwAEAcAIJKgBWImEFAHAiAwcAwIGWZfkxIq5DggqAbUhYAQAcwcABAPCEfYLqev8jQQXAJUhYAQAcwMABAPCAfYLqOiJ+7vwoANQmYQUA8AgDBwDA3hcJquuI+K7rwwDAH0lYAQB8wcABAJQmQQVAQhJWAABh4AAAipKgAmASElYAQFkGDgCgDAkqACYnYQUAlGLgAACmJkEFQEESVgBACQYOAGBKElQAEBESVgDAxAwcAMA0JKgA4EkSVgDAVAwcAEBqElQAcDQJKwBgCgYOACAlCSoAWIWEFQCQloEDAEhDggoANvU+Il6FhBUAkISBAwAYmgQVAHTxOnZDx13vBwEAeIyBAwAYkgQVAAzhQ+z+vo5XElYAwGgMHADAMCSoAGBoElYAwFAMHABAVxJUAJCShBUA0J2BAwDoQoIKAKYgYQUAdGPgAAAuRoIKSvgYuy877yPi7f4/e7H/uQo3tWBmElYAwEUZOACATUlQQRlvIuL2uVzNsiwv4vOfCX/Z+qGAbiSsAIDNGTgAgE1IUEEJ7yPiNnbDxtGntZdleRm7Pyeuwq0umJWEFQCwGQMHALAaCSoo4WN8HjV+XeMX7m96fRpFf1rjdwJDkrACAFZl4AAAziJBBWUclKA6l4QVlCFhBQCczcABAJxEggpKOCtBdS4JKyhBwgoAOJmBAwA4mAQVlLB6gupcElZQhoQVAHAUAwcA8CQJKijjIgmqc0lYQRkSVgDAswwcAMCDJKighK4JqnNJWEEJElYAwKMMHADA7ySooIThElTnkrCCMiSsAICvGDgAoDgJKigjRYLqXBJWUIaEFQBg4ACAqiSooITUCapzSVhBCRJWAFCYgQMACpGgghKmS1CdS8IKypCwAoBiDBwAMDkJKiijRILqXBJWUIaEFQAUYOAAgElJUEEJpRNU55KwghIkrABgYgYOAJiIBBWUIEG1MgkrKEPCCgAmY+AAgOT2uZVPX8xJUMG8JKguQMIKypCwAoAJGDgAIKllWa5jN2xIUMG8JKg6krCCEiSsACAxAwcAJLJPUN2EL9tgZhJUg5GwgjIkrAAgGQMHAAzuiwTVTcilwMwkqBKQsIIyJKwAIAEDBwAMSoIKSpCgSkzCCkqQsAKAgRk4AGAgElRQggTVZCSsoAyjNAAMxsABAJ1JUEEZElQFSFhBGf5MB4ABGDgAoBMJKijBad/CJKygBLfyAKAjAwcAXJAEFZTgyy6+ImEFZRi1AeDCDBwAsDEJKihDroRnSVhBGV4TAOACDBwAsBEJKijBaV1OJmEFJbjVBwAbMnAAwIokqKAEX1axKgkrKMMoDgArM3AAwJkkqKAMuRE25zUFyvCaAgArMHAAwIkkqKAEp23pxq1AKMGtQAA4g4EDAI7gyyYowZdNDMeoDiUY1QHgSAYOAHiGXAiUIRfC8LwmQRlekwDgAAYOAHiE07JQgtOypOVWIZTgViEAPMHAAQBf8GURlODLIqZjlIcSjPIA8A0DBwDlyX1AGa8j4k7ug5l5TYMyJKwAIAwcABTmtCuU8D4iXsVu2HDalVLcSoQS3EoEoDQDBwCl+LIHSvgQEXcR8aq1dt/5WWAIRn0oQcIKgHIMHABMT64DypCggmd4TYQyJKwAKMHAAcC0nFaFEiSo4ERuNUIJElYATM3AAcBUfFkDJUhQwcocCoASJKwAmI6BA4D05DagDAkq2JjXVChDwgqAKRg4AEjLaVMoQYIKOnErEkqQsAIgNQMHAKn4sgVKkKCCwThUACVIWAGQjoEDgOHJZUAZElQwOK/JUIaEFQApGDgAGJbTolCCBBUk5VYllCBhBcDQDBwADMWXJVCCBBVMxqEEKEHCCoDhGDgA6E7uAsqQoILJeU2HMiSsABiCgQOAbpz2hBIkqKAotzKhBAkrALoycABwUb7sgBIkqICvONQAJXyIz4ca7js/CwBFGDgA2JxcBZQhQQU8yXsCKONN7N4T3PZ+EADmZuAAYBPLsnwfuy8wnNaEuUlQASdxqxNK+Bifb3VKWAGwOgMHAKtaluVlRFyHLytgZhJUwKokrKAECSsAVmfgAOBs+9zE9f5HbgLmJUEFbErCCsqQsAJgFQYOAE7yRYLqOiJ+6vs0wIYkqIAuJKygBAkrAM5i4ADgKBJUUIIEFTAUCSsoQcIKgKMZOAB4lgQVlCFBBQxNwgrKkLAC4CAGDgAeJEEFZUhQASlJWEEJElYAPMnAAcBXJKigBAkqYCrLsnw6lCFhBfOSsALgDwwcAEhQQR0SVMDU9jdQr/c/P3R9GGBLElYARISBA6AsCSooQ4IKKGmfsLre/7iVCnOSsAIozsABUIwEFZQgQQXwBQkrKEHCCqAgAwdAARJUUIYEFcATJKygDAkrgCIMHACTkqCCMiSoAE4gYQUlSFgBTM7AATAZCSooQYIKYEUSVlCChBXAhAwcABOQoIIyJKgANiRhBWVIWAFMwsABkJQEFZQhQQXQgYQVlCBhBZCcgQMgGQkqKEGCCmAgElZQgoQVQEIGDoAEJKigDAkqgIFJWEEZElYASRg4AAYlQQVlSFABJCRhBSVIWAEMzsABMBgJKihBggpgIhJWUIKEFcCADBwAA5CggjIkqAAmJmEFZUhYAQzCwAHQiQQVlCFBBVCQhBWUIGEF0JmBA+DCJKigBAkqAH4nYQUlSFgBdGDgALgACSoo4dMJvtvW2tvOzwLAgCSsoAwJK4ALMXAAbESCCsp4FxG3IUEFwBEkrKAECSuAjRk4AFYmQQUlfIjdqHErQQDAuSSsoATvHwE2YOAAWIEEFZQgQQXApiSsoAw3gAFWYuAAOJEEFZThAygAFydhBSU4QANwJgMHwJEkqKAECQEAhiFhBSV4/wlwAgMHwAEkqKAEJ+gAGJqEFZThBjHAgQwcAI+QoIIyfIAEIB0JKyjBARyAZxg4AL4hQQUlSAAAMA0JKyjB+1eABxg4AEKCCopwAg6AqUlYQRluIAPsGTiAsiSooAwfAAEoR8IKSnCAByjPwAGUI0EFJbjCDwB7ElZQgve/QEkGDqCEfYLqJnajhgQVzMkJNgB4goQVlOEGM1CGgQOY1hcJqpvwAQ5m5gMcABzpi4SVA0AwLweAgOkZOIDp7K/gX0XEP3o/C7AZV/ABYCXeP0MJ3j8DUzJwAFOQoIISnEADgA25AQ1luAENTMPAAaTlAxiU4QMYAFyYA0RQggNEQHoGDiAdV+ihBFfoAWAQ3n9DCd5/AykZOIAUnCCDEpwgA4CBuUENZbhBDaRh4ACG5QMUlOEDFAAk4wASlOAAEjA8AwcwHFfgoQRX4AFgEt6/QwnevwNDMnAAQ3ACDEpwAgwAJuYGNpThBjYwDAMH0I0PQFCGD0AAUIwDTFCCA0xAdwYO4OJcYYcSXGEHACLC+38owvt/oAsDB3ARTnBBCU5wAQCPcoMbynCDG7gYAwewGR9goAwfYACAozgABSU4AAVszsABrM4VdCjBFXQAYBU+P0AJPj8AmzBwAKtwAgtKcAILANiMG+BQhhvgwGoMHMDJfACBMnwAAQAuygEqKOHTAaq71tpd74cBcjJwAEdzhRxKcIUcABiCzx9QwofYjR2vfP4AjmHgAA7iBBWUIEEFAAzLDXIo431EvAo3yIEDGDiAR/kAAWVIUAEAqTiABWW8Dgkr4AkGDuAPXAGHEiSoAIAp+PwCJUhYAQ8ycAAR4QQUFCFBBQBMyw10KEPCCvidgQMK8wEAypCgAgBKcYALypCwguIMHFCQK9xQggQVAED4/ANFSFhBUQYOKMIJJihBggoA4BFusEMZElZQiIEDJuYNPJTxJnbDhjfwAAAHcAAMypCwgskZOGBCrmBDCR/i86mk+87PAgCQls9PUIKEFUzKwAGTcAIJSviUoHrVWvu198MAAMzEDXgoQ8IKJmLggMS8AYcy3sTuzfdt7wcBAKjAATIoQ8IKkjNwQEKuUEMJElQAAAPw+QtKkLCCpAwckIQTRFCCBBUAwKC+uEF/HRE/9X0aYEMSVpCIgQMGJkEFZUhQAQAksj+Adr3/cQAN5iVhBYMzcMCAXIGGEiSoAAAmsCzLy9gNHVcR8V3XhwG2ImEFgzJwwCAkqKAECSoAgElJWEEZElYwEAMHdLR/A3y9/5GggnlJUAEAFCJhBWVIWEFnBg7oYJ+guo6Inzs/CrAdCSoAACSsoAYJK+jEwAEXsizLj/H5BI83tTAnCSoAAB4kYQVlSFjBBRk4YEMSVFCGBBUAAAeTsIIyJKxgYwYO2IAEFZQgQQUAwNkkrKAECSvYiIEDViJBBSVIUAEAsAkJKyhDwgpWZOCAM0hQQRkSVAAAXIyEFZQhYQVnMnDACSSooAQJKgAAupOwghIkrOBEBg44kAQVlCBBBQDAkCSsoAwJKziCgQOeIEEFZUhQAQCQhoQVlCFhBc8wcMADJKigBAkqAADSk7CCEj5GxG1E3KoNwNcMHLAnQQUlSFABADAlCSso4318HjskrCjPwEFpElRQhgQVAABlSFhBGW9iN3RIWFGWgYOSJKigBAkqAADKk7CCEiSsKMvAQRkSVFCCBBUAADxAwgrKkLCiFAMHU5OggjIkqAAA4EASVlCGhBXTM3AwJQkqKEGCCgAAziRhBSVIWDEtAwfTkKCCEiSoAABgAxJWUIaEFVMxcJCaBBWUIUEFAAAXImEFZUhYkZ6Bg5QkqKAECSoAAOhMwgpKkLAiLQMHaUhQQQkSVAAAMCAJKyhDwopUDBwMTYIKypCgAgCAJCSsoAwJK4Zn4GBIElRQggQVAAAkJ2EFJUhYMSwDB8OQoIISJKgAAGBCElZQhoQVQzFw0JUEFZQhQQUAAEVIWEEZElZ0Z+CgCwkqKEGCCgAAipOwghIkrOjGwMHFSFBBCRJUAADAg5ZluY7d0OGwI8xLwoqLMnCwKQkqKEOCCgAAOMg+YXUVETchYQUzk7BicwYONiFBBSVIUAEAAGfZ1x5uQsIKZiZhxWYMHKxGggpKkKACAAA2IWEFJUhYsSoDB2eRoIIyXCsFAAAuQsIKyvBdA2czcHASCSoowakKAACgKwkrKEHCipMZODiYBBWU4E0FAAAwJAkrKMFhS45i4OBJElRQhmuhAABAChJWUIbvKniWgYMHSVBBCU5FAAAAqUlYQQlqEzzKwMHvvCmAErwpAAAApiRhBSU4rMlXDBzFudYJZbjWCQAAlOC7DijjTUTctdZuez8I/Rg4inKqAUpwqgEAAChNrQJK+BgRdxHxSq2iHgNHMfu/W+NVOMEAs5KgAgAAeIDDnlDCu4i4bq3d934QLsPAUcSyLN/H7ktPL+IwJwkqAACAA0hYwfQ+RsSNdFUNBo4C9uPG24j4ofOjAOuSoAIAADiDhBVM7Z9GjvkZOApYluUu3NyAWUhQAQAAbEDCCqb0i9rF3Awck9u/OP+n93MAZ5OgAgAAuAAJK5jKx4h4oXwxLwPH5JZluQ8vxpCVBBUAAEBHElYwhdetteveD8E2DBwTc3sDUpKgAgAAGJCEFaTlFsfEDBwT83dvQCoSVAAAAAlIWEFK/sLxSRk4JrYsy2/h+iSMTIIKAAAgMQkrSOPfrbWb3g/B+gwcE1uWxb9cGI8EFQAAwIQkrGBo71prL3s/BOszcExqf13y/zo/BvCZBBUAAEABElYwJAPHpP7U+wHYzIveDwDE+4j474j4r9balXEDAABgfq21+9baq9bai4j4W0S8jt1tfgBW9ufeDwAwGQkqAAAAIiJi/7nwOkLCCmALbnAArONNRPzSWvu+tXZj3AAAAOBLrbXb1tpVRPw1drf9P3R+JID0DBwAp5OgAgAA4CgSVgDrkagCOI4EFQAAAKuQsAI4j4ED4DBvYjdquKUBAADA6lprtxFxuyzLi9gNHdcR8UO/JwIYn0QVwOMkqAAAALioLxJWP8YuYfXvkLACeJCBA+BrH2P35vFvrbUf928qf+v9UAAAANTTWvu1tXbTWvs+In6JXV0AgD2JKoAdCSoAAACGtf+8ercsy/exy1ddh4QVUJwbHEBlElQAAACk0lr7TcIKYMfAAVQjQQUAAMAUJKyA6iSqgCokqAAAAJiWhBVQkRscwMwkqAAAAChFwgqoxMABzEaCCgAAAELCCpifRBUwCwkqAAAAeISEFTAjNziAzCSoAAAA4AgSVsBMDBxANhJUAAAAsAIJKyA7iSogCwkqAAAA2IiEFZCRGxzAyCSoAAAA4IIkrIBMDBzAaD7E7s3TXyWoAAAAoB8JK2B0ElXAKF5HxJ1bGgAAADAeCStgRG5wAD29j4h/xi5BdW3cAAAAgLFJWAEjMXAAl/ZtgupWggoAAADykbACepOoAi5FggoAAAAmJWEF9OAGB7AlCSoAAAAoRMIKuCQDB7A2CSoAAABAwgrYnEQVsBYJKgAAAOBBElbAFtzgAM4hQQUAAAAcTMIKWJOBAziWBBUAAABwNgkr4FwSVcChJKgAAACATUhYAadwgwN4igQVAAAAcDESVsAxDBzAtySoAAAAgO4krIDnSFQBn0hQAQAAAEOSsAIe4gYH1CZBBQAAAKQhYQV8ycAB9UhQAQAAAOlJWAESVVCHBBUAAAAwpW8SVlcRcRMSVjA9NzhgbhJUAAAAQBn7hNXtPmH119hVLD50fixgIwYOmI8EFQAAAFBea+1+n7B6EbuE1evOjwSszMAB83gdEb+01l7sX7zvez8QAAAAwAhaa3etteuI+K/Y1S7e930iYA0GDshNggoAAADgQBJWMBcDB+QjQQUAAABwJgkryM/AAXlIUAEAAABsQMIKcjJwwNgkqAAAAAAuRMIKcjFwwHgkqAAAAAA6k7CC8Rk4YBwSVAAAAAADkrCCMRk4oC8JKgAAAIAkJKxgLAYOuDwJKgAAAIDkJKygPwMHXI4EFQAAAMCEJKygDwMHbEuCCgAAAKAICSu4LAMHrE+CCgAAAKA4CSvYnoED1iNBBQAAAMAfSFjBNgwccB4JKgAAAAAOImEF6zJwwPEkqAAAAAA4i4QVnM/AAYeToAIAAABgdRJWcBoDBzxNggoAAACAi5CwguMYOOCPJKgAAAAA6ErCCp5n4IDPJKgAAAAAGI6EFTzMwEF170KCCgAAAIAEJKzgawYOKvoQEf8TuwTVSwkqAAAAALKRsAIDB3V8jN0f8n/fJ6j+JUEFAAAAwAwkrKjKwMHsPiWoXuwTVG87Pw8AAAAAbELCimoMHMxIggoAAACA0iSsqMDAwSwkqAAAAADgARJWzMrAQXYSVAAAAABwAAkrZmPgICMJKgAAAAA4wyMJq499nwqO8+feDwAH+hgRdxFx65YGAAAAAKyntXYXEXfLsnwfEVcRcR0RP3V9KDiAgYPRvYuI24i4c0sDAAAAALaz//7tNiJul2V5Ebuh4zoi/tLrmeApElWMSIIKAAAAADraJ6z+tU9Y/T0krBiQGxzzuu/9AEeSoAIAAACAAe2/r3srYcVoltZa72dgI8uyZPiXK0EFAAAAAMkkS1i9a6297P0QrM/AMbFlWX6LiO96P8cDPsS+5ddau+/7KAAAAADAOZZleRm7oeMqxvw+8t+ttZveD8H6JKrm9jYifu79EHsSVAAAAAAwoQQJq197PwDbcINjYsuyXEfEfzo/hgQVAAAAABQzUMLqY0S88N3knAwck1uW5bfBLUYAACAASURBVD4u/weIBBUAAAAAEBHdE1avW2vXF/5nciEGjskty3IVEf97gX+UBBUAAAAA8KgOCSu3NyZn4ChgWZbbiPjHRr9eggoAAAAAOMqFEla/tNbuNvrdDMDAUcSyLG9jvVVUggoAAAAAWMVGCat/ttZuV/pdDMrAUciZNzkkqAAAAACAzayUsPoYETfGjRoMHMXs19DbOPzalwQVAAAAAHBRJyas3sRu3Ljf4pkYj4GjqP1fPn4VET9GxA/f/NfvYndb484fBgAAAABAT/tD21cR8TIe/i7z14h45bvMegwcAAAAAABAOn/q/QAAAAAAAADHMnAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgAAAAAAIB0DBwAAAAAAkI6BAwAAAAAASMfAAQAAAAAApGPgAAAAAAAA0jFwAAAAAAAA6Rg4AAAAAACAdAwcAAAAAABAOgYOAAAAAAAgHQMHAAAAAACQjoEDAAAAAABIx8ABAAAAAACkY+AAAAAAAADSMXAAAAAAAADpGDgAAAAAAIB0DBwAAAAAAEA6Bg4AAAAAACAdAwcAAAAAAJCOgQMAAAAAAEjHwAEAAAAAAKRj4AAAAAAAANIxcAAAAAAAAOkYOAAAAAAAgHQMHAAAAAAAQDoGDgDg/9m72+s6jitt2LvX8n/qjYCcCMiJQHAE0kSg4wisJwJzIjAnAhUjMBCBwQhMRDA8EQwRQb0/0LJJml8Aunp3VV3XWlweeyTqFg54UHXuXdUAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3VFwAAAAAAAA3flDdgDmsyzLs4j48NcPEfHig7/kRUQ82TcVHN5tRLz94L9fr//5NiLeR8TbWuv7vUONZFmWEhG/ZOeYxOta6yk7BH3wZ3M/tdYlO8N9LctSszMAD/bV9W2t9frTv4HH8Z65q/+stb799l/G7JZl+SEi/i87xyTe1FovskOwvaVWP99oZ1mWi7grLF7EXZnxY2YeGNzvm8R//rKo/n7LslyH96i93NZaf8gOQR+WZXkfBh92oeAADuj39e11/Gt9+y4zUM+8Z+7qf2qtv2aH4PiWZTlFxG/ZOSah4BiUgoNNrYXGzxFxERHPU8MAEXebwuv116UN4ZcpOHb3X7XWy+wQHNuyLD9HxN+yc8xCwQF04hwfr2+dYv5O3jN3da61PssOwfEty3IZET9l55iEgmNQnsHBoyzL8sOyLKdlWS7XCcu/R8SfQ7kBR/Ek7hZLf42I/12W5d2yLK+WZXnxjb9vRiU7wGR+zg5AF3yf7Oc2OwDAd3oad1cX/hYR/7csy9tlWX5dr3nh666yA0zkqT0X37K+byk39vMuOwBtKDh4kGVZXqx3Yr+Lu4XlT+H6COjB07grIf+xlh02g6taawkf8O3JB9d8D98n+ynZAQAe6HncDfP83zp452fHlzk9u69TdgAOz/vVvl5lB6ANBQf3sp7WuI6If8Td1IxSA/r1NP61GSzLsjzLjXMINn37eeIDCL5m/f6wzthPyQ4AsIGfIuJv6yDPKTvM0Rjo2Z21Lt9ykR1gImfPKB2XgoPvshYb7+LutIY76mE8v8TdFVazFx0mOvZl08fX+P7Yz40NHzCYpxHxm6Ljswz07Mc1VXyL9e5+7PUHpuDgq9arqK7jrth4mhwHaO/3ouPVjFdXrR/wnbNzTOQiOwCHZsO3Hxs+YFS/Fx1vl2W5yA5zEN7z93XKDsAxOa28O+XuwBQcfNb68PBXcXcVlRMbMJ8/R8S7Sa8Qsunbj6k2PsuGb3c2fMDonkfE32cd4vmQgZ7dzbif4vv43tjPVa31XXYI2lFw8G/WD5uu4+4DTmBeT+LuDuPLyTaCPujb1yk7AIdkw7ef17XW99khAHby54h4a8DCQM+ODPTwJda7+ynZAWhLwcFH1vtJr+NuwgUg4u5hjdNsBNfJjqvsHBOxsOdzfF/sR6kLzOZpRPxj8mdzeO/f1yk7AMfitPKubmut3vMGp+Dgn5ZleRl3z9rwJgt86mlEXE+0EbQA2o+pNj5iw7ersw0fMLHflmUp2SEyGOjZncENPuV7Yj8lOwDtKTiIiIh1YfeX7BzAoT2Ju43gKTtIa7XWEhG32TkmcsoOwKFcZAeYiHIDmN0vs5Yc4WfAngz08CkFx35KdgDaU3Dwe7nxS3YOoBtTlBxh07cnC3w+5PthP+5gB5i05DDQs7tTdgCOwWnlXd3UWt9mh6A9Bcfk1muplBvAfc1Qcvjgbz+m2oiIiPX74Gl2jkm8Wa8oAWDSkiMM9OzJAAe/872wn5IdgH0oOCa2fjjpWirgoX5bluUiO0Qr66THTXaOiZyyA3AIp+wAEynZAQAO5pcJBng+ZaBnPwZ6+J2CYz8lOwD7UHBMav3BajEDPNblsizPskM0VLIDTMRCnwjfB3u5DVO7AJ/z20wfQhvo2d0pOwC5XE+1q9e11vfZIdiHgmNeJbypAo/3JMb+kKxkB5iIqbbJuZ5qV5c2fABfdLksyw/ZIXZUsgNMxCAHvgf2M/LnFHxCwTGh9bkbz7NzAMN4vr6vDGf9APAqO8dETtkBSHXKDjCRkh0A4MCeRsTL7BA7KtkBJvJ08NPvfJuCYx/nWquCYyIKjsmsP0w9dwPY2l8GXqyX7AATseCfm9d/H+da63V2CICD+/PIz5r7kIGe3VnvTMr1VLtSbkxGwTGfkh0AGFbJDtDCOvlxm51jEq6pmpTrqXZVsgMAdOJldoAdlewAEzllByDNRXaAiXjm8GQUHBNZJ1B+zM4BDOvHgSfdSnaAiZyyA5DilB1gIiU7AEAnflyW5ZQdYg8Genb1fOCT73yd0zv7uKm1vssOwb4UHHN5mR0AGN7L7ACNlOwAE7Hwn5PXfR9XNnwA9/IyO8COSnaAiVj3TMZp5V05vTEhBcck1jdTpzeA1oY8xVFrfRsRN9k5JuGaqsnY8O3KfcQA9/N0xLXtF5TsABM5ZQdgd6fsAJO4DevdKSk45vFrdgBgGqO+35TsABM5ZQdgV6fsAJO4rbWW7BAAHRp1bfsRAz27ck3VfJza2cdlrfV9dgj2p+CYwLIsP4Q3U2A/Pw26YC/ZASbiZ9ZcvN77MM0G8DCjrm0/p2QHmIj1zyScVt5VyQ5ADgXHHH6OiCfZIYCpDLdgXydBrrJzTMI1VZOw4duV+4gBHm64te0XlOwAEzllB2A3p+wAkzjXWq+zQ5BDwTGHWRZjwHGMepS/ZAeYyCk7ALuwRtnHeb16BICHOWUH2MM60PM6O8ckXFM1D+vdfZTsAORRcMzhp+wAwHSejrhgr7VeRsQ5O8ckLrIDsAsbvn04vQHwODN9GO1Kw/1YBw3OaeVdlewA5FFwDG5ZlovsDMC0Rl2w2/TtY6YPEqa0vr7Pk2PMomQHABjAqGvbjxjo2dUpOwDNnbIDTOJNrfVddgjyKDjGd5EdAJjWRXaARkxC72eKDxIm5vXdx9V65QgAj3ORHWBHBnr2YaBnfNa7+yjZAcil4BjfRXYAYFpDXo+3TobcZOeYxCk7AE2dsgNMomQHABjERXaAHRno2Y8PwAfleqrd3NZaS3YIcik4xvdjdgBgXuuibkQ2ffsw1TYo11Pt5na9agSAx3syy7rEQM+uTtkBaOaUHWAS1rooOEY28AeLQD9GfR+yiNqPqbYxeV33UbIDAAxm1LXt5xjo2YeBnnFZ7+7DexUKjsE9yw4ATG/ITeB6n/3r7ByTOGUHoIlTdoBJlOwAAIMZcm37BQZ69uOD8MG4nmo351rr2+wQ5FNwjG2mxRdwTCO/D9n07cNU22BcT7WbGxs+gM2NvLb9iIGeXZ2yA7C5i+wAk3B6g4hQcIzuWXYAYHrPsgO0st5rf87OMQlTbWPxeu7Dhg9gez9kB9iZgZ59GOgZzyk7wCS8RxERCo7RPcsOAExv9GO5FlT7OGUHYFOn7ACT8P4EsL0fswPsyUDPrgyADMJp5d1c1VrfZYfgGBQcADS1LMvIk24mpPdhqm0QNny7eb1eLQIAj6Uw38cpOwCbUVbto2QH4DgUHGObaroEOKxh7ypeJ0beZOeYhI3CGLyO+/BhFEAjEw5dGOjZx/PBB8NmcsoOMIHb9YQZRISCAwAeq2QHmMQpOwCbOGUHmMDZhg+gqWfZAfZkoGdXBkE657Tybkp2AI5FwQEAj3MZEbfZISbgmqrO2fDtRrkBwNZKdoBJKDj65zXcR8kOwLEoOABobeij1us99z5Q3IcNQ98usgNMwlUiAGzNQM8+fnJNVfdO2QEmcFNrfZsdgmNRcADQ2rDP4PhAyQ4wiVN2AB5FQdXem/UqEQDYjIGeXVkvdcpp5d2U7AAcj4JjUMuyXGRnAJhFrfU6Is7ZOSbgmqpOrdOIP2XnmEDJDgDAsEp2gEkoOPrltdtHyQ7A8Sg4AGAbJTvAJGwc+uR1a+82TNcC0IiBnt24pqpfp+wAE3i9niiDjyg4AGAbJTvAJE7ZAXgQBUd7lzZ8ADRWsgNMwrqpM66n2o1hHj5LwQEAG1jvvX+TnWMCrqnqjOupdlOyAwAwvJIdYBIKjv54zdo711oVHHyWggMAtlOyA0zCBqIvXq/2zuvVIQDQjIGe3bimqj+n7AATUG7wRQoOANjOZdzdg09bp+wA3IuCo72SHQCAaZTsAJOwfuqE66l28yo7AMel4ACAjaz335ssae+5qbY+uJ5qNyU7AADTMNCzDwVHPy6yA0zgZj1BBp+l4ACAbZXsAJOw6euD16m9Kxs+APZioGc3rqnqh/Vue05v8FUKDgDY0HoP/jk7xwRsJPrgdWrPh0wA7K1kB5iEddTBOa28i9uw3uUbFBwAsD0TJu2Zajs4G75d3NZaS3YIAOZioGc3Co7j8xq1d7meHIMvUnAAwPZMmOzDhuLYvD7tea8BIIuBnvYM9Byf9W57JTsAx6fgAICNrffhX2XnmIANxbF5fdrz4RIAWZTs+7CeOiinlXdxXk+MwVcpOACgDZu+9ky1HZQN3y7Otda32SEAmJOBnt0oOI7La9NeyQ5AHxQcANDAei/+bXaOCdhYHNNFdoAJOL0BQDYDPe0Z6Dku+5D2SnYA+qDgAIB2bPras7E4Jq9LeyU7AABzM9CzG+uqg3FaeRdv1pNi8E0KDgBox4R1e6bajslGvK2rWuv77BAAEAZ69mBddTxek/ZKdgD6oeAAgEbW+/HP2TkmYINxIMuy/BwRT7JzDK5kBwCAlYGe9gz0HI/9R1u36wkx+C4KDgBoy6avPRuMY/F6tHVbazUtC8AhGOjZzUV2AO64nmoX1rrci4IDANqyOGvPVNuxKDjaKtkBmMofa62LX339iog32d84TMdAT3vWV8fhtWjPewr38ofsANCx/xcRb7ND8GgvIuKv2SEYV6313bIsV2HKp7Wfwwe/6VxPtYuSHQAAPnEZ9lSt+VD9OLwWbZ3Xk2Hw3RQc8HBva63X2SF4nGVZsiMwh8tQcLSm4DgGG762bmz4ADgaAz27eLIsy8+uqTwE3+dtOb3BvbmiCgAaWx+QdpudY3CuqToGBUdbNnwAHFXJDjAB66xk62ll2lLicW8KDgDYR8kOMAEbjkSup9qFDR8Ah7SeLDDQ05a1bj6vQVtXtdZ32SHoj4IDAPZRsgNMwIYjl69/W69rre+zQwDAV5TsAIN74gRBOl//tkp2APqk4ACAHaz35t9k5xica6py2fC15fQGAEdXsgNMwHoridPKzd16xgwPpeAAgP2U7AATsOlLYMPX3NmGD4CjM9CzC2vdPL72bZXsAPRLwQEA+ynZASZg45HD170t5QYAvSjZAQbnmqo8vu5tlewA9EvBAQA7We/Pv8rOMTjXVOWw4WvrVXYAAPhOJTvABKy7dua0cnM36wkweBAFBwDsq2QHmMBFdoCZLMvyImz4WnpTa32XHQIAvoeBnl0oOPbna95WyQ5A3xQcALCj9R792+wcg7MB2dcpO8DgSnYAALinkh1gcK6p2p+vd1slOwB9U3AAwP5KdoDB2YDsy9e7ndvw/A0AOmOgZxfWXztxPVVzr9eTX/BgCg4A2F/JDjA4U207Wa+nepqdY2CXNnwAdKpkBxicte5+fK3bMszDoyk4AGBn6wPUbrJzDM5GZB+n7ACDK9kBAOCBSnaAwRno2Y+vczvn9cQXPIqCAwByvMoOMDgbkX34OrdzrrVeZ4cAgIcw0LML67DGXE/VnHKDTSg4ACCHxVxbptoacz1VcyU7AAA8koGetqx12/M1bst7BJtQcABAgvVe/dfZOQZnQ9LWKTvA4Ep2AAB4JAM9bRnoac/Xt52bWuu77BCMQcEBAHls+tqyIWnL17edKxs+AHpnoGcX1mONrKeVXU/VjtMbbEbBAQBJ1geqnbNzDMxUWyOup2pO+QnAKPxMa8tat51TdoCB3Yb3Bjak4ACAXBZ2bdn0tXHKDjCw21pryQ4BAFsw0NPck2VZLrJDDMo+op3L9YQXbELBAQC5HM1ty8akDV/XdpSeAIzGz7a2rMs25rRycyU7AGNRcABAovWe/ZvsHANzTdXGbPiaU3oCMBo/29qy1t3eKTvAwM611uvsEIxFwQEA+Wz62rLp29YpO8DAzrXWt9khAGBLBnqae7oOoLAd+4d2SnYAxqPgAIB8ju23ZYOyLV/PdpSdAIzKz7i2TtkBRuG0cnMlOwDjUXAAQLL1AWuvs3MMzDVVG1mW5VnY8LVUsgMAQCMGetqy1t3OKTvAwN6sJ7pgUwoOADgGm762bPq24evYztVadgLAcAz0NOeaqu1Y77ZTsgMwJgUHABxArfUyIs7ZOQZmo7KNU3aAgZXsAADQmIGetk7ZAXrneqqmbmutJTsEY1JwAMBxlOwAA3NN1SOt11M9T44xqtu15ASAYRnoac5a9/FO2QEGZq1LMwoOADiOkh1gcDZ9j+Pr107JDgAAOynZAQbmmqrHs95t51V2AMal4ACAg1gfuPYmO8fAbFge55QdYGAlOwAA7KRkBxjcKTtAr1xP1dS51vo2OwTjUnAAwLGU7AADe7Isy0V2iB65nqqpGxs+AGZhoKc5Az0Pd8oOMDCnN2hKwQEAx3IZEbfZIQZm0/cwvm7t2PABMJuSHWBgrql6uIvsAAPz/A2aUnAAwIHUWt+HBWBLPqh/mFN2gIH58w7AbAz0tHXKDtAbp5WbulpPbkEzCg4AOJ6SHWBgptruyYavqddrqQkA0zDQ05yBnvvzNWunZAdgfAoOADiYWut1RJyzcwzslB2gMzZ87fhwB4BZlewAAzPQc3+n7ACDuq21Wu/SnIIDAI6pZAcYmA/s7+eUHWBQZxs+AGZloKe5U3aAXjit3FTJDsAcFBwAcEwlO8DATLV9Jxu+ppQbAMyuZAcYmIGe7+dr1U7JDsAcFBwAcEDrg9jeZOcY2Ck7QCds+Np5lR0AAJKV7AADM9Dz/U7ZAQZ1U2t9mx2COSg4AOC4SnaAgfng/vv4OrXxZi0xAWBaBnqaO2UHODqnlZsq2QGYh4IDAI7rMiJus0MMylTbNyzL8kNE/JidY1AlOwAAHETJDjAwgyrf5mvUTskOwDwUHABwULXW9+Ge/pZO2QEOzoavjdvw5xoAIiKi1lrCQE8rBnq+7ZQdYFCv170s7ELBAQDH5p7+dnyA/3W+Pm1c2vABwEcU/+1Yz32B66ma8meaXSk4AODA1geznbNzDMpU2xes11P9lJ1jUCU7AAAcjIGedhQcX+Zr08a51qrgYFcKDgA4Ppu+dk7ZAQ7Khq+Nc631OjsEAByJgZ6mnq8nFfh3p+wAg1JusDsFBwAcn0ViOz7I/zxflzZKdgAAOCgDPe1Y133C9VRN+bPM7hQcAHBwtdZ3EXGVnWNQrqn6hOupmirZAQDgoAz0tHPKDnBASp82bta9K+xKwQEAfbDpa+eUHeBgbPjauLLhA4DPM9DTlGuq/p31bhtOb5BCwQEAHai1loi4zc4xKBucj/l6tKGkBICv87OyHeu71Xpa+cfsHAO6DX+GSaLgAIB+WDC24ZqqleupmrldS0oA4AsM9DR1yg5wIMqeNi5rre+zQzAnBQcA9MOR33ZO2QEOwoavDeUkAHwfPzPbcE3Vv1jvtlGyAzAvBQcAdKLW+jYiztk5BmWjc8fXoQ3lJAB8Hz8z25l+nee0cjPnWut1dgjmpeAAgL7Y9LUx/TVVNnzNnNdyEgD4BgM9TZ2yAxzA9CVPIyU7AHNTcABAXxzbb2f2Dc/s//6tKCUB4H787GzDNVXWu62U7ADMTcEBAB2ptb6LiKvsHIOafcMz+79/KyU7AAB0pmQHGNi06z2nlZt5s+5RIY2CAwD6U7IDDGr2qbaL7AADuqq1vs8OAQA9WX92Guhp45QdING05U5jJTsAKDgAoDO11suIuM3OMagpNz7LsvwcEU+ycwyoZAcAgE6V7ACDmnmgZ8p1fmO3tdaSHQIUHADQp5IdYFCn7ABJbPi2d7uWkQDAPRnoaWq6dZ/rqZqx1uUQFBwA0KeSHWBQs061TbfR3UHJDgAAnSvZAQZ1yg6QwFq3jVfZASBCwQEAXaq1vo2Im+wcg5pqA+R6qmZKdgAA6FzJDjCoGQd6plrf7+S87kkhnYIDAPpVsgMM6pQdYGc2fNu7seEDgMcx0NPUNOs/11M14/QGh6HgAIB+lewAg5ptqm2aDe6ObPgAYBslO8CgTtkBdmSt24bnb3AYCg4A6FSt9X1EXGXnGNQUGyHXUzVjwwcA2yjZAQY100DPRXaAAV3VWt9lh4DfKTgAoG8lO8CgTtkBdjJFkbOz12v5CAA8koGepmZZB87y77mnkh0APqTgAICO1VovI+I2O8eAZplqs+HbntMbALCtkh1gUBfZAVpzWrmJ23UPCoeh4ACA/pXsAIMa+sN/G74mzjZ8ALAtAz3N/LQ+gHtkQ6/nk5TsAPApBQcA9M8Djds4ZQdozIZve8oNAGijZAcY1OjrwdH//TKU7ADwKQUHAHRufcDbTXaOAY1+TZUN3/aUjQDQhp+xbQy7HnRauYmbWuvb7BDwKQUHAIzBpq+NITd9NnxNvFnLRgBgYwZ6mhn5mqoh1/HJSnYA+BwFBwCMwdU4bZyyAzRykR1gQCU7AAAMzkBPG6MWAaP+e2Uq2QHgcxQcADCAWuv7iHidnWNAo15TZcO3rdtQMgJAa37WtjHcutBp5SZer3tOOBwFBwCMw6avjaE2fcuyvIiIp9k5BnNpwwcAbRnoaWbEa6qGWr8fhL0mh6XgAIBB1FovI+KcnWNAp+wAGztlBxhQyQ4AAJPwIWsboxUCo/37ZDuve004JAUHAIzFwnN7o11TZcO3rXOt9To7BADMwEBPM8OsD11P1YQ9Joem4ACAsXj4YhtDbPpcT9VEyQ4AAJPxYev2Rrqmaoh1+8HYY3JoCg4AGEit9V1E3GTnGNAoG6VTdoABlewAADAZH7a2Mcp6d5R/j6O4WfeYcFgKDgAYj03f9n4cZKrNhm9bVzZ8ALAvAz3NdL9OdD1VE/aWHJ6CAwDG49h+G11v+lxP1YQ/awCQw4eu2xvhmqqL7ACDuQ3rXTqg4ACAwdRa30fE6+wcA+q64AjXU23tttZaskMAwKQuQqVMAwAAIABJREFU4+7DV7bV+3q39/xHc7nuLeHQFBwAMKaSHWBAvU+12fBtyzQbACRZP3T1s3h73a4XnVZuomQHgO+h4ACAAdVaryPinJ1jQF1u+mz4mnA1BgDkKtkBBtTzQM8pO8BgzuueEg5PwQEA4yrZAQbUZcERNnxbO9da32aHAICZGehpptf1bq+5j6pkB4DvpeAAgHGV7AAD6nWqzYZvW05vAMAxlOwAA+pu3ei0chMlOwB8LwUHAAyq1vouIt5k5xhQV5s+G74mSnYAACAi/ExuoceBnlN2gMG8WfeS0AUFBwCMrWQHGFBXBUf0l/fortYHmwIAyQz0NNPb+rG3vEdXsgPAfSg4AGBslxFxmx1iML1NtdnwbatkBwAAPlKyAwyom/Wj08qbu621luwQcB8KDgAY2DppfpmdY0BdbPqWZXkWEc+TY4zkttbqzxMAHIuBnu1dZAe4h1N2gMFY69IdBQcAjK9kBxhQFwVH9JOzFyU7AADwMQM9TTxZlqWXdWQvOXvxKjsA3NcfsgMAJHsbEX/MDjG4d9kBZldrvV6W5RyObm/pp2VZfujgWQyn7ACDKdkBAIDPKhHxS3aIwfwcBy+OXE+1uXOt9W12CLgvBQcwtfXDyevsHLCDEhF/yQ4xmJ/jwB94u55qczc2fABwTAZ6mujhZMQpO8BgnN6gS66oAoA5lOwAAzr6pu/o+XpjwwcAx1ayAwymh2uqjp6vN4c+sQNfouAAgAnUWt9FxJvsHIP5aVmWH7JDfMUpO8BgbPgA4NhKdoABHbZAcD3V5q7WPSN0R8EBAPMo2QEGdMhNn+upNve6g+etAMDU1g9nr7JzDOaQa93VRXaAwZTsAPBQCg4AmESttUTEbXaOwRx103fUXL1yegMA+uBn9raOfE3VKTvAQG5rrf7s0C0FBwDMxcJ1W0e9puqUHWAgZxs+AOiDgZ4mDldwOK28uZIdAB5DwQEAc/Gg5O0datNnw7c55QYA9MXP7m0daq27OmKmnpXsAPAYCg4AmEit9W1EnLNzDOZoG6yj5emdUhAA+uJn97aOeE3VKTvAQG7WPSJ0S8EBAPOx6dvWRXaAT5yyAwzkzfrAUgCgEwZ6mjhMweG08uZKdgB4LAUHAMzHsf1tHWaqzYZvcyU7AADwIAZ6tnWIte7qSFlGULIDwGMpOABgMutE+lV2jsEcZaN1kR1gILehDASAXvkZvq3DDPSE08pbel1rfZ8dAh5LwQEAc7Lp29ZRNnxHyTGCSxs+AOiTgZ4m0teZTitvzp6QISg4AGBCtdYSdxPqbCN9qm1Zlh8i4qfMDIMp2QEAgEfx4e220guOOEaGUZxrrf6MMAQFBwDMy4J2W9kbrux//kjOtdbr7BAAwMMZ6Nlc+kBPuJ5qS/aCDEPBAQDz8vDFbWVv+LL/+SMp2QEAgE34EHdbaetN11Ntzl6QYSg4AGBStda3EXGTnWMgaVNtrqfaXMkOAABswoe428ocqDHMs52b9Tk1MAQFBwDMrWQHGEzWxsuGbztXNnwAMAYDPZvLvKbqlPTPHZHij6EoOABgbiU7wGAUHP1zlQUAjKVkBxjM7utO11Nt6jasdxmMggMAJlZrfR8RV9k5BrL7VJvrqTZ1uz6QFAAYR8kOMJiLSf6Zo7pc94AwDAUHAFCyAwxm76k2pze2Y5oNAAZjoGdzT5dlebHzP9N6dzslOwBsTcEBAJOrtV7G3VFltqHg6Jf7iAFgTCU7wGBOe/2DnFbe1LnWep0dAram4AAAImz6trTbNVU2fJs6rw8iBQAGY6Bnc3sO2Bjm2U7JDgAtKDgAgAiL3a3ttRGz4duO0xsAMLaSHWAge15TZb27nZIdAFpQcAAAsU6u32TnGIiCoz8lOwAA0FTJDjCYU+t/gNPKm3pTa32XHQJaUHAAAL8r2QEG0vyaKhu+TV2tDyAFAAZloGdzewzaGObZTskOAK0oOACA35XsAINpvSG7aPz7z6RkBwAAdlGyAwxkj2uqFBzbuK21luwQ0IqCAwCIiIh1gv0qO8dAWm/IbPi2cbs+eBQAvqnWep2dgUcp2QEGc2r1GzutvClrXYam4AAAPlSyAwyk9TVVCo5tlOwAAMA+1oGe19k5BmKt24dX2QGgJQUHAPBP6yT7OTvHQJpszNbi5EmL33tCJTsAAN2wRhqDafbttLymSsGxjfP6/BkYloIDAPiUTd92Wm3MbPi2cWPDB8A9vMsOwOMZ6Nncaevf0PVUm3J6g+EpOACAT1kEb+dJo6k2Bcc2fK8Dw1iW5YdlWUpE/JidZWBK8XEY6NlOi3Wpte52fK8zPAUHAPCRWuu7iLjJzjGQ05a/meupNmXDBwxhWZZf4+50wS/JUUb3LjsAmzHksJ0W11QpOLZxte7tYGgKDgDgc2z6trP1Bs2Gbxuv1weNAnRrWZaLZVneRcRfQ/m9Byc4BmGgZ3OnjX8/11Nto2QHgD0oOACAzzHZvp2tp9oUHNvwPQ50a1mWZ8uyXEbE3yPiaXaeWdRar7MzsCkDPdvZbH26nlbm8W7X583A8BQcAMC/WSfbX2fnGMhpi9/E9VSbOdvwAb1aluVl3J0kMOG8rzfZAdictcB2thzoUXBso2QHgL0oOACAL7Hp285WGzUbvm343ga6syzLz+t1VH8JZXeG6+wAbMtAz+ZOG/0+1rvbKNkBYC8KDgDgs9YJ93N2jkFsNdVmw7cNV1IA3Vivo7qOiL+F66gyKcfH5HXdzqPXqU4rb+am1uqZQUxDwQEAfI1N33ZOj/mbbfg282Z9sCjAoS3L8sN6HdX/RsSPyXFmd/Zh4ZgM9Gxqi4EewzzbKNkBYE8KDgDga0y6b+exGzYbvm2U7AAA37IsyynunrPxl+Qo3LnODkBTBnq2c3rk32+9u42SHQD2pOAAAL5onXS/yc4xiMdOtdnwPd5t+BADOLBlWV6s11H9Fq6jOhIDH2Pz+m7nwetVp5U383p9vgxMQ8EBAHyLTd92Tg/5m9ZixIbv8S5t+IAjWq+jehUR/wjXUR2N66kGtw70vMnOMYiny7I8e+Dfa5hnG4Z5mI6CAwD4lsu4m3zn8R66cTttGWJiJTsAwKfW66jeRcSfc5PwBS+zA7CLkh1gIA9d7yo4Hu+8PlcGpqLgAAC+ap14t1DexkOvqbLhe7xzrfU6OwTA75ZluViW5W3cXUfllN4xudpwHgZ6tnO679/geqrNeL9iSgoOAOB7lOwAAznd5y9eCxH3sD9eyQ4AEPHP66hKRPw9Ip4nx+HrXrnacA4Gejb1/AHXVBnm2YarhZmSggMA+KZ18v2cnWMQ993AnVqEmFDJDgCwLMvLuLuO6pfcJHyH2/Bh4WxKdoCB3He9q+B4vJv1eTIwHQUHAPC9SnaAQdz3miobvse7suEDMq3XUb2LiL+Ea1h64fTGZAz0bOr0vX+h66k2o5BlWgoOAOB7lewAAzl9z1/keqrNuHICSLEsy7NlWS7j7joq7+f9ONdaX2aHIEXJDjCI+1xTZZjn8TwviKkpOACA77JOwL/JzjGI793InVqGmMRtrbVkhwDmsj5n42VEvI2In5LjcH+n7ACkKdkBBvK9610Fx+NdOnHGzBQcAMB9lOwAg/jea6ps+B7PNBuwq/W6lbfhOqpe/c96VRETMtCzqdO3/oJ1Pex98vFKdgDIpOAAAO7jMu6OQPN4p6/9P11PtRn3EQO7WK+juo6Iv4X3716dI+JldgjSlewAg/iea6pO7WMM76yUZXYKDgDgu61Hn03Eb+NbpzNOe4QY3LnW+jY7BDC2D66j+t+I+DE5Do/zs2teCAM9W/rWetdp5ccr2QEgm4IDALivkh1gEE+/MdVmw/d4Tm8ATS3LcoqId3F3HRV9+5NSnAgDPRs7fen/4bTyZkp2AMim4AAA7mU9An3OzjGIz5YYNnybKdkBgDEty/JivY7qt3B//Ahe11pLdggOpWQHGMTXrqk67RdjWG/W58bA1BQcAMBDmIzfxume/zvf78o1I8DW1uuoXkXEP8J1VKN4XWs9ZYfgWAz0bOpLp5KdVn68kh0AjkDBAQA8hGP72/jSVJsN3+OV7ADAWJZl+TXurqP6c3IUtqPc4GsM9Gzj9On/4LTyJm7DngwiIuIP2QEAgP7UWt8ty3IVET9lZxnAz/HBBnotPGz4Hue21mrDB4/392VZsjNAK8oNvuUyIv6aHWIAz5dlefbJVUqnpCwjuXRaGe44wQEAPJQPkLdx+uS/O73xeCU7AACHptzgm9YP5K+ycwzi0/Wt9e7jOWEEKwUHAPAg68M4b7NzDODTa6pOOTGGYsMHwJf8j3KDezDQs43T7/+H66k2ca61vs0OAUeh4AAAHsOmbxs/R/zzeqrnqUn69+aTKxAAIOJuKONPtdZfs4PQDwM9m/lwoOeUF2MYL7MDwJEoOACAx3iZHWAQp/U/Hdd/vJfZAQA4nHNEXKwfVsN9lewAg/j5k//kYc7ey+BjCg4A4MHWSfk32TkG8PtU2yk3Rvfe1Fqvs0MAcCj/HREvXOfCI7j6chsn11NtwvcjfELBAQA8VskOMIhfw/VUj1WyAwBwGK8j4j9qrS9rre+zw9AvAz2beR53610e7jasd+HfKDgAgEdxN/Fm/pwdoHOO6wMQcfdB9B9rrSfPZGJDpua38Ut2gM4VhS38OwUHALAFmz6y+R4EmNs57oqNC9cVsrVa62XcfY9BJutd+AwFBwCwhZIdgKk5rg8wr3NE/KnW+kyxQWMlOwBTe+1UGnyeggMAeLR1sX2VnYNpOa4PMJ/b+FexUbLDMAXT82Qq2QHgqBQcAMBWbPrI4nsPYB63EfHfEaHYYFfrMMXr7BxM6Y0TavBlCg4AYBProtvdxOztynF9gCl8WGy8dHKPJCU7AFMq2QHgyBQcAMCWXmYHYDpObwCM73VEvFBskG0d6LnJzsFUzk6rwdcpOACALV3G3YQl7OHsuD7A0F5HxH/UWk9O63EghivYU8kOAEen4AAANrNOVV5m52AaL7MDANCEYoPDWqfpDfSwl5IdAI5OwQEAbO1ldgCmcBvKNIDRvImIPyo26EDJDsAUXnsvhG9TcAAAm1oX4W+yczC84h52gGH8XmxcuHqQTrimij2U7ADQAwUHANCCTR+t+R4D6J9igy6tAz1X2TkY2o33Rfg+Cg4AYHO11suIOGfnYFhvHNcH6No5Iv5LsUHnDFvQku8v+E4KDgCglZIdgGGV7AAAPMg5Iv5Ua322DkNAt9ZyzkAPLXjWHNyDggMAaMXUES2ca60lOwQA9/JhsVGyw8CGXmYHYEiXnjUH3+8P2QGAPMuyvIqIF9k5GF6xkZ1TrfX9siyvI+KX7CwMpWQHAOC73UbEr9aCDOwy7oZ6nmQHYSgvswNATxQcMLcXEfFjdgiGd50dgFSvQsHBtkp2AAC+6Tbu1gCvTCEzsnWg5zKsd9mOZ83BPbmiCgBoptb6NiLeZOdgGFc2fACHdhsR/x0Rz2qtL5UbTOJldgCGUrIDQG8UHABAayU7AMMo2QEA+CzFBtNahy8M9LCFW1f6wf0pOACAptZF+m12Drp3rrVeZocA4COKDbjzKjsAQyjZAaBHCg4AYA82fTxWyQ4AwEdeR8QLxQZErEMY5+wcdM+eCR5AwQEA7KFkB6B7JTsAABFxV2z8R6315LlI8BEfTvMYHi4OD6TgAACaWxfrr7Nz0C0PFwc4jmcR8UN2CDigkh2ArpXsANArBQcAsJeSHYBulewAAPzTjxHxj2VZyrIsz5KzwGGsV7UZ6OEhPFwcHkHBAQDsotZ6HRE32TnojoeLAxzTLxHxv4oO+IhrqngIa114BAUHALAnmz7uq2QHAOCrFB2wqrW+jYg32Tnojj0SPIKCAwDYzXr0+jY7B10p2QEA+C6KDrhTsgPQlZu1GAMeSMEBAOytZAegG288XBygO78XHa+WZfEwcqazDvScs3PQDac34JEUHADA3izi+V4lOwAAD/bniHi3LMtLRQcTKtkB6Ibnb8AjKTgAgF2tE/lX2Tk4vNt1AhKAfj2JiL+EooP5GOjhe7yutb7PDgG9U3AAABls+vgW02wA41B0MJX1Q+vX2Tk4vJIdAEag4AAAdldrvQ53E/N1SjCA8XxYdPyaHQYas5bha87rngh4JAUHAJDlZXYADuum1vo2OwQAzTyJiL8uy/JuWZZTdhhoYV3L3GTn4LBKdgAYhYIDAMhyGRG32SE4pJIdAIBdPI2I3xQdDMwpDr6kZAeAUSg4AIAU693EJTsHh1SyAwCwqw+Ljp+zw8BWaq0lDPTw765qre+yQ8AoFBwAQCZTbXzqai2/AJjP04j427Is18uyXGSHgY1Y7/Kpy+wAMBIFBwCQZp1cusrOwaGU7AAApPsxIv6u6GAQJTsAh3K7nuwBNqLgAACylewAHMZtrdVEGwC/+7DoeJacBR5kHeh5nZ2Dw7DWhY0pOACAVOsH2ufsHBxCyQ4AwCH9GBH/uyxLUXTQqZIdgMNwZRlsTMEBAByBhT4RNv8AfN0voeigQ7XW64i4yc5BunOt9W12CBiNggMAOIISEbfZIUh1Y8MHwHf6JSLeLsvyclmWH7LDwHcy0IPvAWhAwQEApKu1vg/30c6uZAcAoCtPIuIvEfFO0UEP1gdLG+iZm/0ONKDgAACO4mV2AFKV7AAAdOn3ouPtsiyn5CzwLSb453W1PnAe2JiCAwA4hHXB/yY7Bymu1lM8APBQTyPit2VZ3i3LcpEdBr6gZAcgjdMb0IiCAwA4ElNtcyrZAQAYxtOI+PuyLNfLsrzIDgMfWgd6rrJzsLvb9YoyoAEFBwBwGLXWy4g4Z+dgV7fr6w4AW/oxIv6xLEvxfA4OxkDPfKx1oSEFBwBwNDZ9cynZAQAY2i9x9yDyX7ODQERErfU6DPTMpmQHgJEpOACAoynZAdhVyQ4AwPCeRMRfl2W5dJqDg3iZHYDdnNdSC2hEwQEAHMr6sOnX2TnYxbnW+jY7BADT+CkiPJuDI7iMiNvsEOyiZAeA0Sk4AIAjKtkB2IXryADY2/O4Kzl+zg7CvNaBHs9lmEPJDgCjU3AAAIfjbuJp2NgDkOFJRPxtWZZTdhCmZtBjfDe11nfZIWB0Cg4A4Khs+sb2xoYPgGS/LcvyMjsEc1qv6bzJzkFT9jOwAwUHAHBUJTsATZXsAAAQEX9ZlqVkh2BaPgAfm9PKsAMFBwBwSB42PjwbPji+P9ZaF7/+9Ssi/r+I+O/wcODR/OIkB0k8bHxcV+t+BmhMwQEAHFnJDkATr234gB7VWt/XWl9GxItQwo/mL57Jwd48bHxoXlfYiYIDADgsDxsflg0f0LVa67ta6yki/jMi3iTHYTu/Lcvyc3YIpuOaqvHc1lpLdgiYhYIDADi6kh2ATd3WWhUcwBBqrW9rrRcR8cfwsOBRlGVZXmSHYB7rw8YN9IzFWhd2pOAAAI6uZAdgUzZ8wHBqrde11hcR8afwQWXvnsRdyfFDdhCm4hTHWEp2AJiJggMAOLRa67uIuMrOwWZs4IFhrVeSvAgPIu/d8/Dzin2V7ABs5rxeswvsRMEBAPTA1P8Yzus1DADD+uBB5M/Cg8h79ovncbCX9WHjBnrGYN8CO1NwAACHt07EmoTtX8kOALCXteg4RcR/hA8ue+WqKvZUsgOwiZIdAGaj4AAAemEaqn8lOwDA3mqt72qtP8fdg8jfZOfhXp6Eq6rYSa31Mgz09O7GaWXYn4IDAOiFDxj6drM+TwVgSuuDyC/Cg8h788uyLBfZIZhGyQ7Ao5TsADAjBQcA0IV1GsoHQv0q2QEAjqDWWmqtz8KDyHvyMjsA0yjZAXgUJ84hgYIDAOhJyQ7Ag9nwAXzggweR/3duEr7Dj05xsAcDPV1747Qy5FBwAAA9KdkBeJArGz6Af7c+iPxl3D2I/HVyHL7uZXYAplGyA/AgJTsAzErBAQB0Y/2Q/CY7B/fm9AbAV6wPIj+FB5Ef2Y/LsrzIDsEUSnYAHsR6F5IoOACA3pTsANybDR/Ad/jgQeT/Fa6pOaJfswMwPgM9Xbqqtb7PDgGzUnAAAL3xYXlfbPgA7qnWerk+iPxP4UHkR/LLsiw/ZIdgCiU7APdifwKJFBwAQFfWqbar7Bx8t5IdAKBXtdYS/3oQuaLjGH7ODsAUfGDej9v1vRpIouAAAHpk09eH21qr1wrgET54EPmL8CDyI1Bw0JyBnq5Y60IyBQcA0CMbiT54nQA28sGDyP8zPIg800+uqWIn1lF98DpBMgUHANCd9ZkOptqOz4YPYGO11rfrg8j/GB5EnMUpDvZgHXV8TivDASg4AIBe2Uwc29mGD6CdWut1rfVF3D2I/JydZzIX2QEYn4GeLljrwgEoOACAXtlQHJvXB2AH68NtX4QHke/pIjsA07CeOrZX2QEABQcA0ClTbYdXsgMAzOKDB5E/i4j/yU0zhafLsjzLDsEUFBzHda61vs0OASg4AIC+2fQdkw0fQIK16Pg1Iv4jPIi8tRfZARifgZ5Dsw+Bg1BwAAA9u84OwGfZ8AEkqrW+Cz8jW1NwsJfr7AB8VskOANz5Q3YAIE+t9SI7Q7ZlWS4i4u/ZOYCHqbW+W5blJiKeZ2fhIyU7AAA0puBgL5cR8dfsEHzEaWU4ECc4AIDelewAfOTGhg+ACfyQHYA5rCeybrJz8JGSHQD4FwUHANA71yEdS8kOAAA7+DE7AFMp2QH4SMkOAPyLggMA6No61XbOzsE/KZwAALZ1nR2Af7pZ9x/AQSg4AIAR+FD9GGz4AJjGsiyew8Eu1us/DfQcQ8kOAHxMwQEAjKBkByAivA4AzMVzONiTgZ5j8DrAwSg4AIDurVNtt9k5sOEDAGjkOjsATivDESk4AIBR+HA9lw0fAEAjtdbLMNCTrWQHAP6dggMAGMV1doDJvcoOAAAwuOvsAJMzUAUHpOAAAEZhw5HL1x8AoC3rrTxXTivDMSk4AIAh1FrfR8RNdo5JXa1ffwAA2rnODjAx5RIclIIDABiJjUcOX3cAgMbWEwTn7ByTst6Fg1JwAAAjuc4OMCkbPgCAfVh37c9pZTgwBQcAMIxa63VE3GbnmIwNHwDAfq6zA0xIqQQHpuAAAEZznR1gMjZ8AAD7uc4OMCHrXTgwBQcAMJrr7ACTseEDANjJenL2TXaOiTitDAen4AAARnOdHWAiNnwAAPu7zg4wEcM8cHAKDgBgKLXWt+E5HHux4QMA2N91doCJWO/CwSk4AIAR2Yjsw9cZAGBntdbr7AyTcFoZOqDgAABGdJ0dYAI2fAAAeTyHoz3DPNABBQcAMKJ32QEm8DY7AADAxK6zA4yu1lqyMwDfpuAAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC6o+AAAAAAAAC684fsANCxV8uyvM8OwaP9kB0AAAAAALg/BQc83PPsAAAA0NBpWZaL7BA82EV2AACA1hQcAAAAfM4v2QEAAOBrPIMDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAAAAADojoIDAAD+//bu4DiO64oFgmUTAAASSElEQVTC8G2X9mIGoiMwFIHgCARlQGcAZkBlQGYARmAwg0EExkRgIAMgguvFDGxRJZVEGo035/X3Vc0Cpc3ZQOzB368bAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEjnndjh4AAAAAAABrETgm1d0PozcAAAAAAMBaBA4A1uZEGQAAAADPTuAAYG1OlAEAAADw7AQOAAAAAAAgjsAxt8fRAwAAAGBSHsUKAIMJHHNzsQUM19270RsAAOC5dbdHsQLAYAIHAAAAwJfxxAQAOAECx9yc4ABG248eAAAAK/B9GwBOgMAxN8dlgdH8fwgAgBndjR4AAAgcs9uNHgBs3m70AAAAWMHd6AEAgMAxO0dmgdHuRg8AAIAV7EYPAAAEjql190N58Rkw1m70AAAAWIEbCgHgBAgc89uNHgBs1mN3340eAQAAz2x/vKEQABhM4JjfbvQAYLN2owcAAMAKdqMHAAAHAsf8dqMHAJt1PXoAAACsYDd6AABwIHBMrrtvq+p+9A5gk3ajBwAAwAp2owcAAAcCxza4ixp4aXvv3wAAYEKfvH8DAE6HwLENV6MHAJvzfvQAAABYgRsIAeCECBwb4DFVwAt7LF/8AACYz2N3X40eAQD8j8CxHe6mBl7KtWP7AABMyPdqADgxAsd2XNXhrmqAtb0bPQAAAFZwNXoAAPA5gWMjjndTu9sEWNtHLxcHAGBCrnMB4AQJHNvyvpziANb1bvQAAAB4Zo/lOhcATpLAsSFOcQAr++CuNgAAJvTedS4AnCaBY2O6+11V3Y/eAUzHXW0AAMzo/vg9GgA4QQLHNr0ZPQCYzpvjKTEAAJjJm9EDAIDfJ3BsUHfvqurD6B3AND509/XoEQAA8Mx+Pn5/BgBOlMCxUd19WVX70TuAePvyaCoAAOZz49FUAHD6BI5tO6/Dc/MBvsZjVZ17NBUAAJPZV9XF6BEAwB8TODbs+EfJ8xI5gC8nbgAAMKPHqrpwnQsAGQSOjevu2xI5gC/zFDduRw8BAIBn9HSdezd6CADw5wgciBzAlxA3AACY0b5c5wJAHIGDqvosctwPngKcrn1VnfnSBwDAZMQNAAglcPBfx4u5s6q6Gb0FODkfy3F9AADm86G7z7xzAwAyCRx8prsfuvu8qn4evQU4CY9V9VN3v/GlDwCAiTxd516OHgIAfD2Bg9/U3e+q6vs6HNUFtulTVb3u7uvRQwAA4Bl9LNe5ADAFgYPf1d233X1WVW/LC8hhS/ZV9ffuvnBqAwCAidzU4TrX6WQAmITAwR/q7vdV9boOj60SOmBe91X1j+MziHejxwAAwDN5ChvnrnMBYC4CB3/K8d0c7+oQOt7W4Q+hwBw+1eEL3+vuvho9BgAAnsnTda6wAQCTEjj4IsfQ8b67X1fVT3W4YATy3NfhVNZfj4+i2g3eAwAAz2Ffh5vyXOcCwAZ8M3oAuY4vZLteluVVVV0cP+dV9e3IXcDv2lfVdVVdd/ft6DEAAPBM9lV1VYfr3LuxUwCAlyRw8H87vpzt6vipZVnO6xA6zqvqrAQPGGVfVbunjxcpAgAwiZuqui3XuQCweQIHz+54BHj39POyLGd1eHfH2fHzqqp+GDANZrWvqoc6/N7dVdWdo/gAAEzg19e5t04iAwC/JHCwuuMF6G0dHo3zmeNpj6pDAHn9i//0qg4xBLZu96uf746fqsMXPHerwW97qMPdnaznbvQAKL/nkGz3q59v6/Dvd7lZB/6Uu/LvIEAt3T16AwAAAAAAwBf5y+gBAAAAAAAAX0rgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggcAAAAAABAHIEDAAAAAACII3AAAAAAAABxBA4AAAAAACCOwAEAAAAAAMQROAAAAAAAgDgCBwAAAAAAEEfgAAAAAAAA4ggc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AAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHEEDgAAAAAAII7AAQAAAAAAxBE4AAAAAACAOAIHAAAAAAAQR+AAAAAAAADiCBwAAAAAAEAcgQMAAAAAAIgjcAAAAAAAAHH+A5kXQJnLj5UwAAAAAElFTkSuQmCC" alt="Logo školy"></div>
+            <div class="school-text">
+                <span class="school-name">GYMNÁZIUM BRNO-BYSTRC,</span>
+                <span class="school-org">příspěvková organizace</span>
+                Vejrostova 1143/2, 635 00 Brno<br>
+                tel.: 533 555 100<br>
+                www.gyby.cz<br>
+                info@gyby.cz
+            </div>
+        </div>
+        <table class="stamp-table">
+            <tr><td colspan="2" class="center">Gymnázium Brno-Bystrc</td></tr>
+            <tr><td>došlo dne</td><td>způsob dodání</td></tr>
+            <tr><td>č.j. GYBY</td><td>vyřizuje</td></tr>
+            <tr><td>poč. dok./příloha&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/</td><td>ukládací znak S10</td></tr>
+        </table>
+    </div>
+
+    <h1>Žádost o odlišnou úpravu organizace vzdělávání</h1>
+    <div class="subtitle">§ 17 zákona č. 561/2004 Sb., o předškolním, základním, středním, vyšším odborném a jiném vzdělávání (školský zákon), ve znění pozdějších předpisů</div>
+
+    <div class="form-body">
+        <div class="form-card">
+            <div class="card-title">Údaje žáka</div>
+            <div class="field-row">
+                <div class="field"><label>Příjmení a jméno:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Rodné číslo:</label><input class="line-input" type="text"></div>
+            </div>
+            <div class="field-row wide-left">
+                <div class="field"><label>Bydliště:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>PSČ:</label><input class="line-input" type="text"></div>
+            </div>
+            <div class="field-row thirds">
+                <div class="field"><label>Školní rok:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Třída:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Druh sportu:</label><input class="line-input" type="text"></div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="card-title">Sportovní organizace a požadované úpravy</div>
+            <div class="one-line-field club-line">
+    <label for="sport_klub">Klub / sportovní organizace:</label>
+    <input id="sport_klub"
+           class="line-input"
+           type="text"
+           name="sport_klub">
+</div>
+            <div class="wide-field">
+    <div class="one-line-field">
+        <label for="pozadovany_rozsah">Požadovaný rozsah studijních úprav:</label>
+        <input id="pozadovany_rozsah"
+               class="line-input"
+               type="text"
+               name="pozadovany_rozsah_radek1">
+    </div>
+
+    <div class="extra-lines">
+        <input class="line-input"
+               type="text"
+               name="pozadovany_rozsah_radek2">
+
+        <input class="line-input"
+               type="text"
+               name="pozadovany_rozsah_radek3">
+    </div>
+</div>
+            <div class="signature-row">
+                <div class="field"><label>V Brně dne:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Podpis:</label><input class="line-input" type="text"></div>
+            </div>
+        </div>
+
+        <div class="form-card">
+            <div class="card-title">Vyjádření sportovního klubu</div>
+            <div class="small-note">Start v soutěžích, potvrzení o zařazení do reprezentace ČR, mezinárodní úroveň.</div>
+            <div class="lined-textarea">
+                <div class="line-layer"><span></span><span></span><span></span></div>
+                <textarea class="multi"></textarea>
+            </div>
+            <div class="signature-row">
+                <div class="field"><label>V Brně dne:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Podpis představitele svazu:</label><input class="line-input" type="text"></div>
+            </div>
+        </div>
+
+        <div class="form-card compact-card">
+            <div class="card-title">Souhlas rodičů</div>
+            <div class="one-line-field">
+                <label>Příjmení a jména rodičů:</label>
+                <input class="line-input" type="text">
+            </div>
+            <div class="one-line-field">
+                <label>Souhlas rodičů – podpis:</label>
+                <input class="line-input" type="text">
+            </div>
+        </div>
+
+        <div class="form-card compact-card">
+            <div class="card-title">Vyjádření školy</div>
+            <div class="one-line-field">
+                <label>Vyjádření třídního učitele:</label>
+                <input class="line-input" type="text">
+            </div>
+            <div class="one-line-field">
+                <label>Vyjádření ředitele školy:</label>
+                <input class="line-input" type="text">
+            </div>
+            <div class="signature-row">
+                <div class="field"><label>V Brně dne:</label><input class="line-input" type="text"></div>
+                <div class="field"><label>Podpis:</label><input class="line-input" type="text"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="actions-panel">
+        <button class="btn btn-primary" type="button" onclick="window.print()">Tisk / uložit jako PDF</button>
+    </div>
+</div>
+
+<script>
+(function(){
+    function autosize(el){
+        el.style.height = 'auto';
+        el.style.height = Math.max(el.scrollHeight, el.classList.contains('multi') ? 96 : 34) + 'px';
+    }
+    document.querySelectorAll('textarea').forEach(function(t){
+        autosize(t);
+        t.addEventListener('input', function(){ autosize(t); });
+    });
+})();
+</script>
+</body>
+</html>
