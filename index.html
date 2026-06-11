@@ -129,7 +129,7 @@ border-bottom:1px solid #444;
     }
 }
 
-@page{size:A4;margin:12mm}
+@page{size:A4;margin:15mm}
 @media print{
 body{padding:0;background:white;font-size:13.5px;line-height:1.32}
 .page{width:auto;max-width:none;margin:0 auto;box-shadow:none;border-radius:0;padding:0;background:white}
@@ -239,8 +239,6 @@ html.pdf-export .subtitle{
 
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 <div class="page">
@@ -259,74 +257,104 @@ html.pdf-export .subtitle{
 </section><section class="form-card compact-card"><div class="card-title">Souhlas rodičů</div><div class="field" style="margin-bottom:11px"><label for="rodice">Příjmení a&nbsp;jména rodičů</label><input id="rodice" name="rodice" class="line-input" type="text"></div><div class="field"><label for="souhlas_rodicu">Souhlas rodičů (podpis)</label><input id="souhlas_rodicu" name="souhlas_rodicu" class="line-input" type="text"></div></section>
 </section><section class="form-card compact-card"><div class="card-title">Vyjádření školy</div><div class="field"><label for="vyjadreni_tu">Vyjádření třídního učitele</label><input id="vyjadreni_tu" name="vyjadreni_tu" class="line-input" type="text"></div><div class="field school-director-field"><label for="vyjadreni_reditele">Vyjádření ředitele školy</label><input id="vyjadreni_reditele" name="vyjadreni_reditele" class="line-input" type="text"></div><div class="signature-row" style="margin-top:42px"><div class="field"><label for="brno3">V&nbsp;Brně</label><input id="brno3" name="brno3" class="line-input" type="text"></div><div class="field"><label for="podpis3">Podpis</label><input id="podpis3" name="podpis3" class="line-input" type="text"></div></div></section>
 </main>
-<div class="actions-panel"><button type="button" class="btn btn-primary" onclick="downloadPDF(event)">⬇️ Stáhnout PDF</button></div>
+
+<div class="actions-panel">
+    <button class="btn btn-primary" type="button" onclick="window.print()">Tisk / uložit jako PDF</button>
+</div>
 </div>
 <script>
 function autoResizeTextarea(el){el.classList.toggle('empty-print',el.value.trim().length===0);el.style.height='auto';el.style.height=el.scrollHeight+'px'}
 function resizeAllTextareas(){document.querySelectorAll('textarea').forEach(autoResizeTextarea)}
-function saveToBrowser(){const data={};document.querySelectorAll('input,textarea').forEach(el=>data[el.name||el.id]=el.value);localStorage.setItem('zadost_odlisna_uprava_vzdelavani',JSON.stringify(data));alert('Data byla uložena do paměti prohlížeče.')}
-function loadFromBrowser(){const saved=localStorage.getItem('zadost_odlisna_uprava_vzdelavani');if(!saved)return;const data=JSON.parse(saved);document.querySelectorAll('input,textarea').forEach(el=>{const key=el.name||el.id;if(Object.prototype.hasOwnProperty.call(data,key))el.value=data[key]})}
-function printPDF(){resizeAllTextareas();window.print()}
-function waitForImages(root){
-  const imgs=[...root.querySelectorAll('img')];
-  return Promise.all(imgs.map(img=>{
-    if(img.complete && img.naturalWidth>0)return Promise.resolve();
-    return new Promise(resolve=>{img.onload=resolve;img.onerror=resolve});
-  }));
+function val(id){return (document.getElementById(id)?.value || '').trim()}
+function txt(sel){return (document.querySelector(sel)?.innerText || '').trim()}
+function makePdfString(objects, rootId){
+  const enc=new TextEncoder();
+  let out='%PDF-1.4\n%âãÏÓ\n';
+  const offsets=[0];
+  objects.forEach((obj,i)=>{offsets[i+1]=enc.encode(out).length; out+=(i+1)+' 0 obj\n'+obj+'\nendobj\n'});
+  const xref=enc.encode(out).length;
+  out+='xref\n0 '+(objects.length+1)+'\n0000000000 65535 f \n';
+  for(let i=1;i<=objects.length;i++) out+=String(offsets[i]).padStart(10,'0')+' 00000 n \n';
+  out+='trailer\n<< /Size '+(objects.length+1)+' /Root '+rootId+' 0 R >>\nstartxref\n'+xref+'\n%%EOF';
+  return out;
 }
-async function downloadPDF(e){
-  resizeAllTextareas();
-  const page=document.querySelector('.page');
-  const exportButton=e?.target;
-  const oldButtonText=exportButton?exportButton.textContent:'';
-  try{
-    if(exportButton){exportButton.disabled=true;exportButton.textContent='Vytvářím PDF…'}
-    document.documentElement.classList.add('pdf-export');
-    await waitForImages(page);
-    await new Promise(resolve=>setTimeout(resolve,250));
-
-    const canvas=await html2canvas(page,{
-      scale:2,
-      useCORS:true,
-      backgroundColor:'#ffffff',
-      scrollX:0,
-      scrollY:0,
-      width:page.offsetWidth,
-      height:page.offsetHeight,
-      windowWidth:page.offsetWidth,
-      windowHeight:page.offsetHeight
-    });
-
-    const {jsPDF}=window.jspdf;
-    const pdf=new jsPDF({orientation:'p',unit:'mm',format:'a4',compress:true});
-    const imgData=canvas.toDataURL('image/jpeg',0.98);
-
-    // Přímý export musí vypadat jako tisk na jednu A4.
-    // Proto se obrázek stránky vloží se zachováním poměru stran
-    // a případně se zmenší tak, aby se celý vešel na jednu A4.
-    const pageW=210;
-    const pageH=297;
-    let imgW=pageW;
-    let imgH=canvas.height*imgW/canvas.width;
-    if(imgH>pageH){
-      imgH=pageH;
-      imgW=canvas.width*imgH/canvas.height;
-    }
-    const x=(pageW-imgW)/2;
-    const y=0;
-    pdf.setFillColor(255,255,255);
-    pdf.rect(0,0,pageW,pageH,'F');
-    pdf.addImage(imgData,'JPEG',x,y,imgW,imgH);
-    pdf.save('zadost-o-odlisnou-upravu-organizace-vzdelavani.pdf');
-  }catch(err){
-    console.error(err);
-    alert('PDF se nepodařilo vytvořit přímo. Zkuste prosím tlačítko Tisk / tisk do PDF.');
-  }finally{
-    document.documentElement.classList.remove('pdf-export');
-    if(exportButton){exportButton.disabled=false;exportButton.textContent=oldButtonText}
+function pdfText(s){
+  s=String(s||'');
+  let hex='FEFF';
+  for(const ch of s){
+    const cp=ch.codePointAt(0);
+    if(cp<=0xFFFF){hex+=cp.toString(16).padStart(4,'0').toUpperCase();}
+    else{const u=cp-0x10000,hi=0xD800+(u>>10),lo=0xDC00+(u&1023);hex+=hi.toString(16).padStart(4,'0').toUpperCase()+lo.toString(16).padStart(4,'0').toUpperCase();}
   }
+  return '<'+hex+'>';
 }
-document.addEventListener('DOMContentLoaded',()=>{loadFromBrowser();document.querySelectorAll('textarea').forEach(el=>{autoResizeTextarea(el);el.addEventListener('input',()=>autoResizeTextarea(el))})})
+function wrapText(s,maxChars){
+  s=String(s||'').replace(/\s+/g,' ').trim();
+  if(!s)return [''];
+  const words=s.split(' '),lines=[]; let line='';
+  words.forEach(w=>{if((line+' '+w).trim().length>maxChars&&line){lines.push(line);line=w}else line=(line+' '+w).trim()});
+  if(line)lines.push(line);return lines;
+}
+function createLocalPdf(){
+  const mm=72/25.4,pageW=210*mm,pageH=297*mm;
+  const X=v=>v*mm,Y=v=>pageH-v*mm,esc=n=>(Math.round(n*100)/100).toFixed(2);
+  const c=[];
+  function line(x1,y1,x2,y2){c.push(`${esc(X(x1))} ${esc(Y(y1))} m ${esc(X(x2))} ${esc(Y(y2))} l S`)}
+  function rect(x,y,w,h){c.push(`${esc(X(x))} ${esc(Y(y+h))} ${esc(X(w))} ${esc(h*mm)} re S`)}
+  function text(s,x,y,size=10,bold=false){if(!s)return;c.push(`BT /${bold?'F2':'F1'} ${esc(size)} Tf ${esc(X(x))} ${esc(Y(y))} Td ${pdfText(s)} Tj ET`)}
+  function multiline(s,x,y,size=10,maxChars=80,step=5,bold=false,maxLines=10){wrapText(s,maxChars).slice(0,maxLines).forEach((l,i)=>text(l,x,y+i*step,size,bold))}
+  function card(title,x,y,w,h){rect(x,y,w,h);text(title,x+4,y+6,9,true);line(x+4,y+9,x+w-4,y+9)}
+  function field(label,value,x,y,w,labelW=34){text(label,x,y,9.5,false);line(x+labelW,y+1,x+w,y+1);text(value,x+labelW+1,y-0.6,10,false)}
+  function longLines(value,x,y,w,n=3){for(let i=0;i<n;i++)line(x,y+10+i*9,x+w,y+10+i*9);wrapText(value,95).slice(0,n).forEach((l,i)=>text(l,x+1,y+8+i*9,10,false))}
+
+  text('Gymnázium Brno-Bystrc,',44,20,9,true);
+  text('příspěvková organizace',44,25,9,true);
+  multiline(txt('.school-text').replace(/^Gymnázium Brno-Bystrc,\s*příspěvková organizace/i,''),44,31,7.2,48,3.5,false,5);
+  rect(129,15,67,27);line(129,24,196,24);line(129,33,196,33);
+  text('Žádost',158,21,8,true);text('Dne:',132,30,8);text('Č. j.:',132,39,8);
+  text(txt('h1'),12,62,17,true);
+  multiline(txt('.subtitle'),12,70,8.5,128,4,false,2);
+
+  let y=86;
+  card('ÚDAJE ŽÁKA',12,y,186,42);
+  field('Příjmení a jméno:',val('jmeno'),17,y+18,82,34);field('Rodné číslo:',val('rodne_cislo'),109,y+18,84,25);
+  field('Bydliště:',val('bydliste'),17,y+29,82,18);field('PSČ:',val('psc'),109,y+29,84,11);
+  field('Školní rok:',val('skolni_rok'),17,y+40,82,23);field('Třída:',val('trida'),109,y+40,84,13);
+  y=134;
+  card('POŽADOVANÉ STUDIJNÍ ÚPRAVY',12,y,186,58);
+  text('Požadovaný rozsah studijních úprav:',17,y+18,9.5);longLines(val('rozsah'),17,y+21,176,3);
+  field('V Brně',val('brno1'),17,y+52,64,15);field('Podpis:',val('podpis1'),92,y+52,101,15);
+  y=198;
+  card('VYJÁDŘENÍ LÉKAŘE',12,y,186,51);
+  longLines(val('vyjadreni_lekare'),17,y+12,176,3);
+  field('V Brně',val('brno2'),17,y+45,64,15);field('Podpis a razítko lékaře',val('podpis_lekar'),92,y+45,101,42);
+  y=254;
+  card('SOUHLAS RODIČŮ',12,y,186,28);
+  field('Příjmení a jména rodičů',val('rodice'),17,y+16,176,47);
+  field('Souhlas rodičů (podpis)',val('souhlas_rodicu'),17,y+25,176,45);
+  y=16;
+  const c2=[]; const oldPush=c.push.bind(c);
+  // druhá stránka pro vyjádření školy, aby se nic neořezalo
+  const stream1=c.join('\n'); c.length=0;
+  card('VYJÁDŘENÍ ŠKOLY',12,y,186,55);
+  field('Vyjádření třídního učitele',val('vyjadreni_tu'),17,y+18,176,50);
+  field('Vyjádření ředitele školy',val('vyjadreni_reditele'),17,y+31,176,47);
+  field('V Brně',val('brno3'),17,y+49,64,15);field('Podpis',val('podpis3'),92,y+49,101,14);
+  const stream2=c.join('\n');
+  const objects=[];
+  objects.push('<< /Type /Catalog /Pages 2 0 R >>');
+  objects.push('<< /Type /Pages /Kids [3 0 R 7 0 R] /Count 2 >>');
+  objects.push('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+esc(pageW)+' '+esc(pageH)+'] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 4 0 R >>');
+  objects.push('<< /Length '+new TextEncoder().encode(stream1).length+' >>\nstream\n'+stream1+'\nendstream');
+  objects.push('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica /Encoding /WinAnsiEncoding >>');
+  objects.push('<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold /Encoding /WinAnsiEncoding >>');
+  objects.push('<< /Type /Page /Parent 2 0 R /MediaBox [0 0 '+esc(pageW)+' '+esc(pageH)+'] /Resources << /Font << /F1 5 0 R /F2 6 0 R >> >> /Contents 8 0 R >>');
+  objects.push('<< /Length '+new TextEncoder().encode(stream2).length+' >>\nstream\n'+stream2+'\nendstream');
+  return makePdfString(objects,1);
+}catch(err){console.error(err);alert('PDF se nepodařilo vytvořit. Data se nikam neposílají; chyba je jen v lokálním exportu.')}
+  finally{if(exportButton){exportButton.disabled=false;exportButton.textContent=oldButtonText}}
+}
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('textarea').forEach(el=>{autoResizeTextarea(el);el.addEventListener('input',()=>autoResizeTextarea(el))})})
 window.addEventListener('beforeprint',resizeAllTextareas)
 </script>
 </body>
